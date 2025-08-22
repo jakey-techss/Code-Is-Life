@@ -667,7 +667,13 @@ form {
     padding-bottom: 33px;
     padding-top: 90px;
 }
-
+#contact2 > h4{
+    padding-bottom: 33px;
+    padding-top: 90px;
+}
+#contact2 {
+    margin-top: 0px;
+}
 .skill>p {
     margin: 0;
     padding: 0;

@@ -45,7 +45,15 @@ const Projects = {
 
     LeapYearChecker: new Project("Leap Year Checker", "A simple console application that checks if a year is a leap year.", "assets/LeapYearChecker.png", ["python-logo"], 2, "Learn More", "View Repo", "#", "#"),
 
-    BFit: new Project("BFit", "Earn rewards by walking, Climb up the leaderboards, complete missions to more rewards. Challenge yourself and friends in this Android app.", "assets/BFit.png", ["android (2)","figma","database"], 1, "Learn More", "View Repo", "#", "#")
+    BFit: new Project("BFit", "Earn rewards by walking, Climb up the leaderboards, complete missions to more rewards. Challenge yourself and friends in this Android app.", "assets/BFit.png", ["android (2)","figma","database"], 1, "Learn More", "View Repo", "#", "#"),
+
+    FoxtrotScanner: new Project("Foxtrot Scanner", "An Android QR code scanner and saver app with a creative fox-themed design.", "assets/FoxtrotScanner.png", ["android (2)"], 1, "Learn More", "View Repo", "#", "#"),
+
+    Dreamers: new Project("Dreamers", "An Android app that uses the Gemini API to generate personalized custom stories.", "assets/Dreamers.png", ["android (2)"], 1, "Learn More", "View Repo", "#", "#"),
+
+    InterNumberBase: new Project("Inter-Number Base Converter", "A Scratch utility app for converting numbers between bases like binary, decimal, and hexadecimal.", "assets/InterNumberBase.png", ["scratch-cat-logo-png_seeklogo-431721"], 1, "Learn More", "View Projects", "#", "#"),
+
+    EsTuBrute: new Project("Es Tu Brute", "A number guessing game hosted by a bear where players wager cash as the stakes rise.", "assets/Es Tu Brute.png", ["Snap2"], 1, "Learn More", "View Projects", "#", "#")
 }
 let skillName;
 var skillDetail = {};
@@ -392,9 +400,13 @@ function getSkillDetails(skillName) {
             title: "MIT AI 2",
             experience: "3 Years",
             imagePath: "assets/android (2).png",
-            frameworks: [],
+            frameworks: [
+                new Framework("Gemini API", "assets/GeminiAPI.png"),
+            ],
             projects: [
-                Projects.BFit
+                Projects.BFit,
+                Projects.FoxtrotScanner,
+                Projects.Dreamers
             ]
         };
     } else if (skillName === "Arduino") {
@@ -422,6 +434,7 @@ function getSkillDetails(skillName) {
             imagePath: "assets/scratch-cat-logo-png_seeklogo-431721.png",
             frameworks: [],
             projects: [
+                Projects.InterNumberBase
             ]
         };
     } else if (skillName === "MBlock") {
@@ -440,7 +453,7 @@ function getSkillDetails(skillName) {
             imagePath: "assets/Snap!.svg",
             frameworks: [],
             projects: [
-                Projects.LaFamigliaKJB
+                Projects.EsTuBrute
             ]
         };
     }
