@@ -662,6 +662,31 @@ form {
     width: 100%;
     text-align: center;
 }
+#search-bar-container {
+    margin-top: 20px;
+    width: 93vw;
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+#search-bar{
+    padding-left: 19px;
+    border: none;
+    border-radius: 11px;
+    background-color: #0F3D3E;
+    color: white;
+    font-family: "Dongle";
+    font-size: 25px;
+    min-width: 242px;
+    max-height: 42px;
+}
+#search-bar:focus {
+    outline: none;
+    border-color: #0F3D3E;
+}
+#search-bar::placeholder {
+    color: white;
+}
 
 #contact>h4 {
     padding-bottom: 33px;

@@ -29,7 +29,7 @@ const Projects = {
 
     CHOHAN: new Project("CHO-HAN", "A multiplayer guessing game where players compete to predict CHO or HAN.", "assets/CHO-HAN.png", ["python-logo"], 2, "Learn More", "View Repo", "#", "#"),
 
-    GCodeAcademy: new Project("GCode Academy", "A SwiftUI-powered learning app that guides users from computer science basics to building their first iOS To-Do app.", "assets/GCodeAcademy.png", ["github","figma", "swift", "python-logo"], 2, "Learn More", "View Repo", "#", "#"),
+    GCodeAcademy: new Project("GCode Academy", "A SwiftUI-powered learning app that guides users from computer science basics to building their first iOS To-Do app.", "assets/GCodeAcademy.png", ["github", "figma", "swift", "python-logo"], 2, "Learn More", "View Repo", "#", "#"),
 
     PotentialCustomers: new Project("Predicting Potential Customers", "A machine-learning application designed to help businesses identify and engage potential customers through data analysis and targeted marketing strategies.", "assets/PotentialCustomers.png", ["python-logo"], 2, "Learn More", "View Repo", "#", "#"),
 
@@ -45,7 +45,7 @@ const Projects = {
 
     LeapYearChecker: new Project("Leap Year Checker", "A simple console application that checks if a year is a leap year.", "assets/LeapYearChecker.png", ["python-logo"], 2, "Learn More", "View Repo", "#", "#"),
 
-    BFit: new Project("BFit", "Earn rewards by walking, Climb up the leaderboards, complete missions to more rewards. Challenge yourself and friends in this Android app.", "assets/BFit.png", ["android (2)","figma","database"], 1, "Learn More", "View Repo", "#", "#"),
+    BFit: new Project("BFit", "Earn rewards by walking, Climb up the leaderboards, complete missions to more rewards. Challenge yourself and friends in this Android app.", "assets/BFit.png", ["android (2)", "figma", "database"], 1, "Learn More", "View Repo", "#", "#"),
 
     FoxtrotScanner: new Project("Foxtrot Scanner", "An Android QR code scanner and saver app with a creative fox-themed design.", "assets/FoxtrotScanner.png", ["android (2)"], 1, "Learn More", "View Repo", "#", "#"),
 
@@ -55,7 +55,29 @@ const Projects = {
 
     EsTuBrute: new Project("Es Tu Brute", "A number guessing game hosted by a bear where players wager cash as the stakes rise.", "assets/Es Tu Brute.png", ["Snap2"], 1, "Learn More", "View Projects", "#", "#")
 }
+
+let AllProjects = [
+    Projects.BFit,
+    Projects.FoxtrotScanner,
+    Projects.Dreamers,
+    Projects.InterNumberBase,
+    Projects.EsTuBrute,
+    Projects.GCodeAcademy,
+    Projects.PotentialCustomers,
+    Projects.FoodHubOrderAnalysis,
+    Projects.DecimalToBinary,
+    Projects.DecimalToOctal,
+    Projects.Text2Binary,
+    Projects.Fibonacci,
+    Projects.LeapYearChecker,
+    Projects.CHOHAN,
+    Projects.RecommendationSystem,
+    Projects.Vireli,
+    Projects.LaFamigliaKJB
+];
+
 let skillName;
+
 var skillDetail = {};
 
 // Conditional Event Listeners
@@ -216,6 +238,41 @@ if (window.location.href.includes("skill.html")) {
         });
     }
 
+}
+
+if (window.location.href.includes("projects.html")) {
+    const projectsContainer = document.getElementById("projects-container");
+    AllProjects.forEach(project => {
+        const projectElement = document.createElement("div");
+        projectElement.className = "project";
+        projectElement.innerHTML = `
+            <img src="${project.imagePath}" alt="project1" id="project2">
+            <div class="project-info">
+                <div class="project-title">
+                    <h3>${project.title}</h3>
+                </div>
+                <p>${project.description}</p>
+                <div class="tools">
+                    ${project.tools.map(tool => `<img src="assets/${tool}.png" alt="${tool}">`).join('')}
+                </div>
+                <div class="project-buttons">
+                    ${Array.from({ length: project.buttonCount }, (_, i) => `
+                        <button><a href="${i === 0 ? project.buttonLink1 : project.buttonLink2}">${i === 0 ? project.buttonText : project.buttonText2}</a></button>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        projectsContainer.appendChild(projectElement);
+    });
+
+    document.getElementById("search-bar").addEventListener("input", function () {
+        const searchTerm = this.value.toLowerCase();
+        const projects = document.querySelectorAll("#projects-container .project");
+        projects.forEach(project => {
+            const title = project.querySelector(".project-title h3").innerText.toLowerCase();
+            project.style.display = title.includes(searchTerm) ? "flex" : "none";
+        });
+    });
 }
 
 //Function Definitions
