@@ -1,332 +1,542 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="assets/e-removebg-preview.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=social_leaderboard" />
     <title>Code Is Life | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/home/home.css">
+    <link rel="icon" href="assets/panda-origami-paper-svgrepo-com.svg">
+    <link rel="stylesheet" href="assets/fonts.css">
 </head>
 
 <body>
     <nav>
-        <h2>Code Is Life</h2>
-        <div id="links">
-            <p id="currentPage">Home</p>
-            <a href="about.html"><p>About me</p></a>
-            <a href="projects.html"><p>Projects</p></a>
-            <a href="contact.html"><p>Contact me</p></a>
+        <div id="logo">
+            <img src="assets/panda-origami-paper-svgrepo-com.png">
+            <h3>Code Is Life</h3>
         </div>
-        <span class="material-icons" id="menu">menu</span>
+        <div id="buttons">
+            <button id="selected">Home</button>
+            <button>About</button>
+            <button>Projects</button>
+            <button id="end">Contact</button>
+        </div>
     </nav>
+    <div id="content">
+        <hero class="glass">
+            <div id="topHalf">
+                <div>
+                    <p class="small">Hi, my name is</p>
+                    <h1>Joshua C.<br>Fineboy-Mark</h1>
+                    <p class="medium">I'm a developer focused on web development, AI and software development. I build
+                        impactful
+                        digital solutions and constantly push for innovation. Lets create something great</p>
+                </div>
+                <div>
+                    <p id="binary">1010101010110010101010010101010<br>1010101010010101010101011010101<br>010110101010101
+                    </p>
+                </div>
+            </div>
+            <div id="contactButtons">
+                <button id="contactMe">Contact Me</button>
+                <a href="https://github.com/jakey-techss" target="_blank"><button id="github"><img
+                            src="assets/github-svgrepo-com.png"></button></a>
+            </div>
+        </hero>
+        <section id="skills">
+            <div class="sectionHeader">
+                <div class="searchBar">
+                    <h2 class="sectionText">Skills</h2>
+                    <div class="filterHolder">
+                        <div class="filter" id="skillsFilter">
+                            <button class="glassButton"><img src="assets/filter-svgrepo-com.svg"></button>
+                            <div class="filterBox" id="skillsFilterBox">
+                                <div class="filterContainer">
+                                    <div class="sortBy">
+                                        <p class="titleFilter">Sort By:</p>
+                                        <select>
+                                            <option>Default</option>
+                                            <option>Projects</option>
+                                            <option>Experience</option>
+                                        </select>
+                                    </div>
+                                    <div class="FilterBy">
+                                        <p class="titleFilter">Filters:</p>
+                                        <div class="filterLevelInput">
+                                            <input type="number" placeholder="Minimum Experience">
+                                            <hr>
+                                            <input type="number" placeholder="Maximum Experience">
+                                        </div>
+                                        <div class="filterLevelInput">
+                                            <input type="number" placeholder="Minimum Projects">
+                                            <hr>
+                                            <input type="number" placeholder="Maximum Projects">
+                                        </div>
+                                        <div class="filterLevelCheck">
+                                            <p class="titleFilter">Categories</p>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Web Development</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Software Development</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Game Development</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Machine Learning & AI</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="searchField glassButton">
+                            <input type="text" placeholder="Search...">
+                            <img src="assets/search-svgrepo-com.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="bodySection">
+                <h5 class="sectionTextAdapted">Web Development</h5>
+                <div class="Holder">
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bodySection" style="margin-top: 16px;">
+                <h5 class="sectionTextAdapted">Software Development</h5>
+                <div class="Holder">
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bodySection" style="margin-top: 16px;">
+                <h5 class="sectionTextAdapted">Game Development</h5>
+                <div class="Holder">
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bodySection" style="margin-top: 16px;">
+                <h5 class="sectionTextAdapted">Machine Learning & AI</h5>
+                <div class="Holder">
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/panda-origami-paper-svgrepo-com.png">
+                        <div class="info">
+                            <h6 class="title">HTML</h6>
+                            <p class="exp">4 Years Experience</p>
+                            <p class="projects">2 Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="creds">
+            <div class="sectionHeader">
+                <div class="searchBar">
+                    <h2 class="sectionText" style="margin-bottom: 0px;">Awards</h2>
+                    <div class="filterHolder">
+                        <div class="filter" id="credsFilter">
+                            <button class="glassButton"><img src="assets/filter-svgrepo-com.svg"></button>
+                            <div class="filterBox" id="credsFilterBox">
+                                <div class="filterContainer">
+                                    <div class="sortBy">
+                                        <p class="titleFilter">Sort By:</p>
+                                        <select>
+                                            <option>Default</option>
+                                            <option>Newest</option>
+                                            <option>Oldest</option>
+                                        </select>
+                                    </div>
+                                    <div class="FilterBy">
+                                        <div class="filterLevelCheck">
+                                            <p class="titleFilter">Categories</p>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Awards</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Certifications</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="searchField glassButton">
+                            <input type="text" placeholder="Search...">
+                            <img src="assets/search-svgrepo-com.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="creds">
+                <div class="rowHolder">
+                    <div class="cred">
+                        <img src="assets/AICRED.png">
+                        <p>MIT Data Science & Machine Learning Course </p>
+                    </div>
+                    <div class="cred">
+                        <img src="assets/Business.png">
+                        <p>Rowan University Think Like An Entreprenuer Graduate</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="projects">
+            <div class="sectionHeader">
+                <div class="searchBar">
+                    <h2 class="sectionText">Projects</h2>
+                    <div class="filterHolder">
+                        <div class="filter" id="projectsFilter">
+                            <button class="glassButton"><img src="assets/filter-svgrepo-com.svg"></button>
+                            <div class="filterBox" id="projectsFilterBox">
+                                <div class="filterContainer">
+                                    <div class="sortBy">
+                                        <p class="titleFilter">Sort By:</p>
+                                        <select>
+                                            <option>Default</option>
+                                            <option>Newest</option>
+                                            <option>Oldest</option>
+                                        </select>
+                                    </div>
+                                    <div class="FilterBy">
+                                        <div class="filterLevelCheck">
+                                            <p class="titleFilter">Categories</p>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Web Development</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Software Development</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Game Development</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Machine Learning & AI</label>
+                                            </div>
+                                            <div class="inputCheck" style="margin-top: 12px;">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>UI Design</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Competitive Software</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Project Demo</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Testable</label>
+                                            </div>
 
-    <hero>
-        <img src="assets/developer-fall-in-love.png" alt="coder" id="hero-image">
-        <div id="hero-text-container">
-            <div id="hero-text">
-                <a href="https://github.com/AnonymousPanda7" target="_blank"><img src="assets/github.png" alt="github"></a>
-                <h1>Joshua Fineboy-Mark</h1>
-            </div>
-            <div id="hero-icons">
-                <div class="icon">
-                    <img src="assets/kotlin.png" alt="kotlin" id="kotlin">
-                    <h3>Software Engineer</h3>
-                </div>
-                <div class="icon">
-                    <img src="assets/python-logo.png" alt="python" id="python">
-                    <h3>Data Scientist</h3>
-                </div>
-                <div class="icon">
-                    <img src="assets/html.png" alt="webDeveloper" id="webDeveloper">
-                    <h3>Web Developer</h3>
-                </div>
-            </div>
-        </div>
-    </hero>
 
-    <section id="about">
-        <h4>About Me</h4>
-        <p>I’m Joshua Fineboy-Mark, a Computer Science student and developer with a focus on software development, data
-            science, machine learning, and artificial intelligence. I’m dedicated to expanding my knowledge in these
-            areas and working on projects that support my development as a developer.</p>
-        <a href="about.html"><button>Learn More</button></a>
-    </section>
+                                            <div class="inputCheck" style="margin-top: 12px;">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>HTML</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>CSS</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>JavaScript</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Python</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Python (ML | AI | Data Science)</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>MIT App Inventor 2</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Firebase</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Redis DB</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Java</label>
+                                            </div>
+                                            <div class="inputCheck">
+                                                <input type="checkbox" id="option1" name="filter" checked>
+                                                <label>Swift UI</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="searchField glassButton">
+                            <input type="text" placeholder="Search...">
+                            <img src="assets/search-svgrepo-com.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="bodySection" style="padding: 0;">
+                <div class="Holder">
+                    <div class="lefter">
+                        <div>
+                            <div class="project">
+                                <div class="projectContainer">
+                                    <img src="assets/629764e87ec76b82fb21fce6.png">
+                                </div>
+                                <p>Recommendation System</p>
+                            </div>
+                        </div>
+                        <div class="projectInfoHolder">
+                            <div class="projectInfo">
+                                <p class="Details">Project Summary</p>
+                                <hr>
+                                <p class="projectDescription">An app with a picture of a flower that you can change by
+                                    clicking the button</p>
+                                <hr>
+                                <div class="tagContainer">
+                                    <div class="tag">Figma</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">Firebase</div>
+                                </div>
 
-    <section id="skills">
-        <h4>Skills</h4>
-        <div id="skills-container">
-            <div class="skill">
-                <div class="skill-icon" id="skill-1">
-                    <img src="assets/html (1).png" alt="html" id="html-skill">
-                </div>
-                <p>HTML</p>
-            </div>
-            <div class="skill">
-                <div class="skill-icon" id="skill-2">
-                    <img src="assets/css3.png" alt="css" id="css-skill">
-                </div>
-                <p>CSS</p>
-            </div>
-            <div class="skill" id="skill-3">
-                <div class="skill-icon">
-                    <img src="assets/javascript.png" alt="js" id="js-skill">
-                </div>
-                <p>JS</p>
-            </div>
-            <div class="skill" id="skill-4">
-                <div class="skill-icon">
-                    <img src="assets/python-language.png" alt="python" id="python-skill">
-                </div>
-                <p>Python</p>
-            </div>
-            <div class="skill" id="skill-5">
-                <div class="skill-icon">
-                    <img src="assets/java.png" alt="java" id="java-skill">
-                </div>
-                <p>Java</p>
-            </div>
-            <div class="skill" id="skill-6">
-                <div class="skill-icon">
-                    <img src="assets/swift.png" alt="swift" id="swift-skill">
-                </div>
-                <p>Swift</p>
-            </div>
-            <div class="skill" id="skill-7">
-                <div class="skill-icon">
-                    <img src="assets/firebase.png" alt="firebase" id="firebase-skill">
-                </div>
-                <p>Firebase</p>
-            </div>
-            <div class="skill" id="skill-8">
-                <div class="skill-icon">
-                    <img src="assets/database.png" alt="database" id="database-skill">
-                </div>
-                <p>Redis DB</p>
-            </div>
-            <div class="skill" id="skill-9">
-                <div class="skill-icon">
-                    <img src="assets/github.png" alt="html" id="html-skill">
-                </div>
-                <p>Github</p>
-            </div>
-            <div class="skill" id="skill-10">
-                <div class="skill-icon">
-                    <img src="assets/wix.png" alt="html" id="html-skill">
-                </div>
-                <p>Wix</p>
-            </div>
-            <div class="skill" id="skill-11">
-                <div class="skill-icon">
-                    <img src="assets/git.png" alt="html" id="html-skill">
-                </div>
-                <p>Git</p>
-            </div>
-            <div class="skill" id="skill-12">
-                <div class="skill-icon">
-                    <img src="assets/figma.png" alt="html" id="html-skill">
-                </div>
-                <p>Figma</p>
-            </div>
-            <div class="skill" id="skill-13">
-                <div class="skill-icon">
-                    <img src="assets/mysql.png" alt="html" id="html-skill">
-                </div>
-                <p>SQL</p>
-            </div>
-            <div class="skill" id="skill-14">
-                <div class="skill-icon">
-                    <img src="assets/android (2).png" alt="html" id="html-skill">
-                </div>
-                <p>MIT AI 2</p>
-            </div>
-            <div class="skill" id="skill-15">
-                <div class="skill-icon">
-                    <img src="assets/arduino.png" alt="html" id="html-skill">
-                </div>
-                <p>Arduino</p>
-            </div>
-            <div class="skill" id="skill-16">
-                <div class="skill-icon" >
-                    <img src="assets/raspberry-pi.png" alt="html" id="html-skill">
-                </div>
-                <p>Rasp. Pi</p>
-            </div>
-            <div class="skill" id="skill-17">
-                <div class="skill-icon">
-                    <img src="assets/scratch-cat-logo-png_seeklogo-431721.png" alt="html" id="html-skill">
-                </div>
-                <p>Scratch</p>
-            </div>
-            <div class="skill" id="skill-18">
-                <div class="skill-icon">
-                    <img src="assets/mblock.png" alt="html" id="html-skill">
-                </div>
-                <p>MBlock</p>
-            </div>
-            <div class="skill" id="skill-19">
-                <div class="skill-icon">
-                    <img src="assets/Snap!.svg" alt="html" id="html-skill">
-                </div>
-                <p>Snap</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="projects">
-        <h4>Projects</h4>
-        <div id="projects-container">
-            <div class="project">
-                <img src="assets/BFit.png" alt="project1" id="project1">
-                <div class="project-info">
-                    <div class="project-title">
-                        <h3>BFit</h3>
-                        <span class="material-symbols-outlined" id="medal">social_leaderboard</span>
+                            </div>
+                            <div class="endAlign">
+                                <a href="index.html">View Project</a>
+                            </div>
+                        </div>
                     </div>
-                    <p>Earn rewards by walking, Climb up the leaderboards, complete missions to more rewards. Challenge
-                        yourself and friends in this Android app</p>
-                    <div class="tools">
-                        <img src="assets/android (2).png" alt="android">
-                        <img src="assets/figma.png" alt="figma">
-                        <img src="assets/database.png" alt="database" id="redis-tool">
-                    </div>
-                    <div class="project-buttons">
-                        <button>Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="assets/La Famiglia KJB.png" alt="project1" id="project2">
-                <div class="project-info">
-                    <div class="project-title">
-                        <h3>La Famiglia KJB</h3>
-                    </div>
-                    <p>Discover the heart of Italy through food — from savory appetizers to indulgent desserts and classic drinks, all crafted with authentic tradition.</p>
-                    <div class="tools">
-                        <img src="assets/figma.png" alt="figma">
-                        <img src="assets/html (1).png" alt="html">
-                        <img src="assets/css3.png" alt="css">
-                        <img src="assets/javascript.png" alt="javascript" id="javascript-tool">
-                    </div>
-                    <div class="project-buttons">
-                        <button>Learn More</button>
-                        <button>View Repo</button>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="assets/GCodeAcademy.png" alt="project1" id="project1">
-                <div class="project-info">
-                    <div class="project-title">
-                        <h3>Gcode Academy</h3>
-                    </div>
-                    <p>A SwiftUI-powered learning app that guides users from computer science basics to building their first iOS To-Do app.</p>
-                    <div class="tools">
-                        <img src="assets/github (1).png" alt="figma" id="github-tool">
-                        <img src="assets/figma.png" alt="html">
-                        <img src="assets/swift.png" alt="figma" id="swift-tool">
-                        <img src="assets/python-logo.png" alt="figma">
-                    </div>
-                    <div class="project-buttons">
-                        <button>Learn More</button>
-                        <button>View Repo</button>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="assets/RecSystems.png" alt="project1" id="project1">
-                <div class="project-info">
-                    <div class="project-title">
-                        <h3>Recommendation System</h3>
-                    </div>
-                    <p>A Python-powered recommendation system that uses machine learning to deliver personalized user suggestions.</p>
-                    <div class="tools">
-                        <img src="assets/python-logo.png" alt="android">
-                    </div>
-                    <div>
-                        <button>Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="assets/Es Tu Brute.png" alt="project1" id="project1">
-                <div class="project-info">
-                    <div class="project-title">
-                        <h3>Es Tu Brute</h3>
-                    </div>
-                    <p>A guessing game with a bear host where the risk increases as players advance through levels.</p>
-                    <div class="tools">
-                        <img src="assets/Snap!.svg" alt="android">
-                    </div>
-                    <div>
-                        <button>Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="assets/CHO-HAN.png" alt="project1" id="project1">
-                <div class="project-info">
-                    <div class="project-title">
-                        <h3>CHO-HAN</h3>
-                    </div>
-                    <p>A multiplayer guessing game where players compete to predict CHO or HAN.</p>
-                    <div class="tools">
-                        <img src="assets/python-logo.png" alt="android">
-                    </div>
-                    <div>
-                        <button>Learn More</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button>View More Projects</button>
-    </section>
+                    <div class="lefter">
+                        <div>
+                            <div class="project">
+                                <div class="projectContainer">
+                                    <img src="assets/629764e87ec76b82fb21fce6.png">
+                                </div>
+                                <p>Recommendation System</p>
+                            </div>
+                        </div>
+                        <div class="projectInfoHolder">
+                            <div class="projectInfo">
+                                <p class="Details">Project Summary</p>
+                                <hr>
+                                <p class="projectDescription">An app with a picture of a flower that you can change by
+                                    clicking the button</p>
+                                <hr>
+                                <div class="tagContainer">
+                                    <div class="tag">Figma</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">Firebase</div>
+                                </div>
 
-    <section id="contact">
-        <h4>Contact Me</h4>
-        <form>
-            <div id="contact-form">
-                <div class="name-container">
-                    <div class="form-group">
-                        <label for="first-name">First Name:</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="e.g. John" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name:</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="e.g. Doe" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="e.g. john.doe@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="reason">Reason:</label>
-                    <select id="reason" name="reason" required>
-                        <option value="general">General Inquiry</option>
-                        <option value="project">Project Collaboration</option>
-                        <option value="recommendation">Recommendation</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-                </div>
-            </div>
-            <button id="submit">Submit</button>
-        </form>
-    </section>
 
-    <footer>
-        <div id="footer-container">
-            <div class="footer-section">
-                <p>@Copyright 2025 Code Is Life</p>
-            </div>
-        </div>
-    </footer>
-    <script src="home.js"></script>
+                            </div>
+                            <div class="endAlign">
+                                <a href="index.html">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lefter">
+                        <div>
+                            <div class="project">
+                                <div class="projectContainer">
+                                    <img src="assets/629764e87ec76b82fb21fce6.png">
+                                </div>
+                                <p>Recommendation System</p>
+                            </div>
+                        </div>
+                        <div class="projectInfoHolder">
+                            <div class="projectInfo">
+                                <p class="Details">Project Summary</p>
+                                <hr>
+                                <p class="projectDescription">An app with a picture of a flower that you can change by
+                                    clicking the button</p>
+                                <hr>
+                                <div class="tagContainer">
+                                    <div class="tag">Figma</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">Firebase</div>
+                                </div>
+
+
+                            </div>
+                            <div class="endAlign">
+                                <a href="index.html">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </section>
+    </div>
 </body>
 
 </html>
