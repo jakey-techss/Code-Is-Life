@@ -2,8 +2,8 @@ body {
     background-color: #393646;
     padding: 18px 30px 18px 30px;
     overflow-x: hidden;
+    overflow-y: auto;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -82,6 +82,21 @@ button {
 #contactMe:hover {
     background-color: #2F2C3A;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#submit:hover {
+    background-color: #2F2C3A;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+#submit{
+    background-color: #5D5973;
+    border: none;
+    color: white;
+    font-family: "Share Tech";
+    border-radius: 6px;
+    padding: 12px 64px;
+    width: 50%;
+    font-size: 0.875rem;
 }
 
 .glass {
@@ -494,7 +509,6 @@ input[type="number"]:focus {
 .filterContainer {
     padding: 4px 0px 24px 12px;
     border-radius: 8px;
-    width: 300px;
     max-width: 100%;
     z-index: 500000;
     backdrop-filter: blur(10px) saturate(150%);
