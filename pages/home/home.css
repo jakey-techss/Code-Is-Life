@@ -2,8 +2,8 @@ body {
     background-color: #393646;
     padding: 18px 30px 18px 30px;
     overflow-x: hidden;
-    overflow-y: auto;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -83,22 +83,10 @@ button {
     background-color: #2F2C3A;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
 #submit:hover {
     background-color: #2F2C3A;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-#submit{
-    background-color: #5D5973;
-    border: none;
-    color: white;
-    font-family: "Share Tech";
-    border-radius: 6px;
-    padding: 12px 64px;
-    width: 50%;
-    font-size: 0.875rem;
-}
-
 .glass {
     border: 1px rgba(217, 217, 217, 0.20) solid;
     border-radius: 12px;
@@ -108,7 +96,9 @@ button {
     color: white;
     background-color: rgba(93, 89, 115, 0.20);
 }
-
+body::selection{
+    background-color: #98E19A;
+}
 #end:hover {
     border-radius: 0px 8px 8px 0px;
 }
@@ -116,10 +106,13 @@ button {
 hero {
     margin-top: 50px;
     width: 95%;
-    padding-left: 36px;
-    padding-right: 24px;
-    padding-top: 20px;
-    padding-bottom: 32px;
+    background-color: #5D5973;
+    border: none;
+    color: white;
+    font-family: "Share Tech";
+    border-radius: 6px;
+    padding: 32px 24px;
+    font-size: 0.875rem;
     display: flex;
     z-index: 500;
     flex-direction: column;
@@ -509,6 +502,7 @@ input[type="number"]:focus {
 .filterContainer {
     padding: 4px 0px 24px 12px;
     border-radius: 8px;
+    width: 300px;
     max-width: 100%;
     z-index: 500000;
     backdrop-filter: blur(10px) saturate(150%);
@@ -720,7 +714,20 @@ textarea{
     border: none;
     outline: transparent;
 }
+#submit{
+    background-color: #5D5973;
+    border: none;
+    color: white;
+    width: 50%;
+    font-family: "Share Tech";
+    border-radius: 6px;
+    padding: 12px 64px;
+    font-size: 0.875rem;
+}
 @media (max-width:1172px) {
+    .filterHolder{
+        display: none;
+    }
     #binary{
         display: none;
     }
@@ -852,10 +859,11 @@ textarea{
     hero{
         width: 80%;
     }
+
     nav{
         justify-content: space-around;
         padding: 16px 0px 16px 0px;
-        width: 100vw;
+        width: 100%;
     }
     #buttons{
         justify-content: space-evenly;
