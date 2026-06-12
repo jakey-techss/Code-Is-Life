@@ -14,7 +14,6 @@ class skills{
     }
 
 }
-projectList.map((element)=>{})
 class project{
     constructor(title, description, image, tags, tools, dateCreated){
         this.title = title;
@@ -111,27 +110,30 @@ let StellarEd = new project("Stellar Ed",
     [HTML,CSS,JS,Firebase,Figma,GeminiAPI,Github,Git],
     new Date(2025,10,30))
 
-let BFit = new project("BFit",
-    "A fitness app that rewards kids for staying active through challenges and competition.",
-    "assets/BFit-removebg-preview.png",
-    ["Stellar Ed"],
-    [Figma,Java,RedisDB,Canva],
-    new Date(2025,4,1))
-
-
-let GcodeAcademy = new project("Gcode Academy",
-    "A Duolingo-style app for learning SwiftUI through interactive lessons.",
-    "assets/_G_-removebg-preview.png",
-    ["Stellar Ed"],
-    [Swift,GeminiAPI,Canva,Github,Git,Python],
-    new Date(2025,8,12))
-
 let Astryx = new project("Astryx",
     "A career app that recommends careers and guides users toward achieving them.",
     "assets/App_Icon-removebg-preview.png",
     ["Stellar Ed"],
     [Java,RedisDB,GeminiAPI,Canva,Figma],
     new Date(2026,4,1))
+
+let ZArena = new project("Z-Arena",
+    "An anime card game where strategy and luck decide victory.",
+    "assets/z-arena.png",
+    ["Stellar Ed"],
+    [Java,HTML,CSS,JS,Figma, Git, Github],
+    new Date(2026,4,1))
+
+let GravityX = new project("Gravity X",
+    "A physics web game to support teachers teaching topics relating to gravity",
+    "assets/GravityX.png",
+    ["Stellar Ed"],
+    [HTML,CSS,JS,Figma, Git, Github],
+    new Date(2026,4,1))
+
+
+
+
 
 
 skillsList.map((element)=>{

@@ -18,7 +18,8 @@ nav {
 #logo {
     display: flex;
 }
-.skill_img{
+
+.skill_img {
     width: 120px;
     padding-left: 8px;
     display: flex;
@@ -26,6 +27,7 @@ nav {
     align-items: center;
     height: 80px;
 }
+
 #logo>h3 {
     color: white;
     font-family: "Unlock";
@@ -90,10 +92,12 @@ button {
     background-color: #2F2C3A;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
 #submit:hover {
     background-color: #2F2C3A;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
 .glass {
     border: 1px rgba(217, 217, 217, 0.20) solid;
     border-radius: 12px;
@@ -103,9 +107,11 @@ button {
     color: white;
     background-color: rgba(93, 89, 115, 0.20);
 }
-body::selection{
+
+body::selection {
     background-color: #98E19A;
 }
+
 #end:hover {
     border-radius: 0px 8px 8px 0px;
 }
@@ -185,17 +191,23 @@ h1 {
     display: flex;
     align-items: center;
 }
-.projectContainer > img{
-   height: 90px;
-   width: auto;
+
+.projectContainer>img {
+    height: 90px;
+    width: auto;
 }
-.lefter{
+
+.lefter {
     display: flex;
+    background-color: #1E1E1E;
+    border-radius: 8px;
 }
-.projectInfo img{
+
+.projectInfo img {
     width: 16px;
 }
-.Details{
+
+.Details {
     color: white;
     font-family: "Unlock";
     margin-top: 24px;
@@ -204,43 +216,50 @@ h1 {
     font-weight: 400;
     font-style: normal;
 }
-.projectDescription{
-    color:white;
+
+.projectDescription {
+    color: white;
     font-family: "Share Tech";
     font-size: 0.875rem;
     width: 95%;
     margin-top: 14px;
     margin-bottom: 14px;
 }
-.endAlign{
+
+.endAlign {
     width: 100%;
     text-align: end;
-    
+
 }
-.endAlign > a{
+
+.endAlign>a {
     color: #98E19A;
     font-family: "Share Tech";
     font-size: 0.75rem;
 }
-.endAlign > a:hover{
+
+.endAlign>a:hover {
     text-decoration: none;
 }
-.tagContainer{
+
+.tagContainer {
     width: 100%;
     margin-top: 12px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-height: 64px;
-    gap:4px 8px;
+    gap: 4px 8px;
     overflow-y: auto;
     margin-bottom: 8px;
 }
-.tag:hover{
+
+.tag:hover {
     cursor: pointer;
     background-color: #393646;
 }
-.tag{
+
+.tag {
     font-family: "Share Tech";
     color: white;
     padding: 6px 12px;
@@ -249,46 +268,49 @@ h1 {
     font-size: 0.75rem;
     background-color: #5E5973;
 }
-.lefter hr{
+
+.lefter hr {
     color: white;
     width: 85%;
     margin: 0;
     padding: 0;
 }
-.projectInfo{
+
+.projectInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.projectInfoHolder{
-    background-color: rgba(93, 89, 115, 0.20);
-    border-radius: 4px;
+
+.projectInfoHolder {
+    background-color: #1E1E1E;
+    border-radius: 0px 8px 8px 8px;
     width: 180px;
     max-width: 100%;
-    margin-left: 4px;
     justify-content: start;
-    gap:4px;
+    gap: 4px;
     align-items: center;
     justify-content: space-between;
-    border: 1px rgba(217, 217, 217, 0.20) solid;
+    border: none;
     height: 240px;
-    border-radius: 8px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     padding: 0px 10px 12px 10px;
 }
-.projectContainer{
+
+.projectContainer {
     width: 270px;
     max-width: 100%;
     height: 160px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 8px;
+    align-items: end;
+    border-radius: 8px 0px 0px 8px;
     background-color: #1E1E1E;
 }
+
 #contactMe {
     background-color: #5D5973;
     border: none;
@@ -298,18 +320,25 @@ h1 {
     padding: 12px 64px;
     font-size: 0.875rem;
 }
+
 #creds {
     margin-top: 36px;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
+#projectList {
+    gap: 12px;
+}
+
 #projects {
     margin-top: 36px;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 #skills {
     margin-top: 36px;
     width: 100%;
@@ -368,12 +397,15 @@ h1 {
 .bodySection {
     padding-left: 30px;
 }
-.project p{
+
+.project p {
     color: white;
-    margin-top: 8px;
+    margin-top: 12px;
+    text-align: center;
     font-family: "Unlock";
     font-size: 1.125rem;
 }
+
 .searchField input {
     background-color: transparent;
     border: none;
@@ -419,11 +451,11 @@ h1 {
 .Holder {
     display: flex;
     justify-content: start;
-    gap:12px 8px;
+    gap: 12px 8px;
     flex-wrap: wrap;
 }
 
-.skill:hover{
+.skill:hover {
     transform: scale(1.04);
 }
 
@@ -458,22 +490,26 @@ option {
         visibility: visible;
     }
 }
+
 #projectsFilter:hover {
     #projectsFilterBox {
         opacity: 1;
         visibility: visible;
     }
 }
+
 #projectsFilterBox {
     transition: all 100ms;
     opacity: 0;
     visibility: hidden;
 }
+
 #credsFilterBox {
     transition: all 100ms;
     opacity: 0;
     visibility: hidden;
 }
+
 #skillsFilterBox {
     transition: all 100ms;
     opacity: 0;
@@ -623,64 +659,69 @@ input[type=number] {
     appearance: textfield;
 }
 
-.cred > img{
+.cred>img {
     height: 160px;
     width: 220px;
     max-width: 100%;
     margin: 0;
     padding: 0;
 }
-.cred > p{
+
+.cred>p {
     color: white;
     font-family: "Share Tech";
     margin-top: 8px;
     font-size: 1.1875rem;
     max-width: 220px;
 }
-.rowHolder{
+
+.rowHolder {
     display: flex;
-    gap:36px;
+    gap: 36px;
     overflow-x: auto;
 }
-label > img{
+
+label>img {
     width: 20px;
 }
 
-#contact label{
+#contact label {
     font-family: "Share Tech";
 }
-#contact{
+
+#contact {
     width: 100%;
     margin-bottom: 60px;
     margin-top: 20px;
 }
-#contact .glass{
+
+#contact .glass {
     padding: 24px 20px 24px 12px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
 }
-.InputRow{
-    display: flex;
-    justify-content: space-between;
+
+.InputRow {
     width: 95%;
-    gap:80px;
-    max-width: 900px;
 }
-.textInput{
+
+.textInput {
     display: flex;
     flex-direction: column;
-    gap:4px;
+    gap: 4px;
     min-width: 250px;
     width: 90%;
     margin-bottom: 16px;
 }
-.textInput > label{
+
+.textInput>label {
     display: flex;
     align-items: center;
-    gap:4px;
+    gap: 4px;
 }
-.textInput > input{
+
+.textInput>input {
     background-color: #2F2C3A;
     border: none;
     margin-right: 22px;
@@ -692,10 +733,18 @@ label > img{
     font-size: 0.875rem;
     width: 100%;
 }
-#contactHolder > div{
+
+#contactHolder>div {
     max-width: 1100px;
+    min-width: 900px;
 }
-textarea{
+
+#contactHolder {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
     height: 130px;
     background-color: #2F2C3A;
     border: none;
@@ -708,21 +757,25 @@ textarea{
     width: 100%;
     resize: none;
 }
-#contact select{
+
+#contact select {
     background-color: #2F2C3A;
     padding: 12px 4px 12px 4px;
 }
+
 #contact input:focus {
     background-color: #393646;
     border: none;
     outline: transparent;
 }
+
 #contact input:focus {
     background-color: #393646;
     border: none;
     outline: transparent;
 }
-#submit{
+
+#submit {
     background-color: #5D5973;
     border: none;
     color: white;
@@ -732,39 +785,57 @@ textarea{
     padding: 12px 64px;
     font-size: 0.875rem;
 }
+
 @media (max-width:1172px) {
-    .filterHolder{
+    .filterHolder {
         display: none;
     }
-    #binary{
+
+    .lefter {
+        background-color: transparent;
+    }
+
+    #binary {
         display: none;
     }
-    body{
+
+    body {
         padding: 0;
         margin: 0;
     }
-    h3{
+
+    h3 {
         font-size: 18px;
     }
-    nav{
+
+    nav {
         background-color: #2F2C3A;
         border-radius: 0px;
         align-items: center;
         display: flex;
         position: sticky;
-        top:0;
+        top: 0;
         z-index: 100000000000;
         padding: 12px 12px 8px 24px;
     }
-    #buttons{
+
+    #buttons {
         background-image: none;
         border-radius: 0px;
         height: 36px;
     }
 
-    #contact{
+    #contact {
         width: 90%;
     }
+
+    .projectContainer {
+
+        align-items: center;
+        border-radius: 8px;
+
+    }
+
     #selected {
         height: 100%;
         border: 1px rgba(217, 217, 217, 0.20) solid;
@@ -793,138 +864,172 @@ textarea{
     #buttons>button:not(#selected):hover {
         background-color: #1E1E1E;
     }
-    #buttons>button:hover{
+
+    #buttons>button:hover {
         background-color: #1E1E1E;
     }
 
-    hero{
+    hero {
         width: 88%;
     }
-    .medium{
+
+    .medium {
         font-size: 18px;
         width: 80%;
         max-width: 100%;
     }
-    #skills{
-        width:95%;
-    }
-    #creds{
+
+    #skills {
         width: 95%;
     }
-    #projects{
+
+    #creds {
+        width: 95%;
+    }
+
+    #projects {
         width: 95%;
     }
 }
+
 @media (max-width:1100px) {
-    body{
+    body {
         padding: 0;
         margin: 0;
     }
-    .InputRow{
+
+    .InputRow {
         flex-direction: column;
-        gap:5px;
+        gap: 5px;
     }
-    #contact select{
+
+    #contact select {
         width: 400px;
         max-width: 100%;
     }
-    .info{
+
+    .project p {
+        text-align: start;
+        margin-top: 8px;
+
+    }
+
+    .info {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;  
+        justify-content: space-evenly;
         height: 46px;
         padding: 0;
         margin: 0;
         border-left: none;
     }
-    .project{
+
+    .project {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .skill {
         width: 120px;
         max-width: 100%;
         height: 80px;
-        gap:3px;
+        gap: 3px;
         padding-right: 0;
         text-align: center;
         justify-content: center;
         flex-direction: column;
     }
-    .title{
+
+    .title {
         font-size: 18px;
         width: 95%;
     }
-    .exp{
+
+    .exp {
         display: none;
     }
-    .projects{
+
+    .projects {
         text-align: center;
         margin-top: 2px;
     }
-    #logo{
+
+    #logo {
         display: none;
     }
-    hero{
+
+    hero {
         width: 80%;
     }
 
-    nav{
+    nav {
         justify-content: space-around;
         padding: 16px 0px 16px 0px;
         width: 100%;
     }
-    #buttons{
+
+    #buttons {
         justify-content: space-evenly;
         width: 100%;
     }
-    h1{
+
+    h1 {
         font-size: 44px;
         line-height: 56px;
     }
-    .medium{
+
+    .medium {
         font-size: 18px;
         width: 90%;
         max-width: 100%;
     }
-    .sectionText{
+
+    .sectionText {
         font-size: 28px;
     }
+
     .skill img {
         width: 48px;
         height: 48px;
         margin: 0;
         margin: 0;
     }
-    .skill_img{
+
+    .skill_img {
         padding: 0;
         width: auto;
         margin-bottom: 4px;
     }
-    .rowHolder{
+
+    .rowHolder {
         overflow-x: hidden;
         flex-wrap: wrap;
-        gap:3px 2%;
+        gap: 3px 2%;
     }
-    .projectInfoHolder{
+
+    .projectInfoHolder {
         display: none;
     }
-    .projectContainer{
+
+    .projectContainer {
         width: 120px;
         max-width: 100%;
         height: 120px;
     }
-    .projectContainer img{
+
+    .projectContainer img {
         width: 70px;
         height: auto;
     }
-    .project > p{
+
+    .project>p {
         text-align: center;
         max-width: 100%;
     }
-    .Holder{
+
+    .Holder {
         justify-content: start;
-        gap:10px;
+        gap: 10px;
     }
 }
