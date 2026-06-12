@@ -104,21 +104,21 @@ let Canva = new skills("assets/canva.png",
     "Canva",4,["Web Development"],"Game","Skill-20");
 //Projects
 let StellarEd = new project("Stellar Ed",
-    "A student platform for tracking homework, deadlines, and study progress.",
+    "A student platform for tracking homework, deadlines, and study progress",
     "https://github.com/jakey-techss/StellarEd/blob/main/assets/Stellar-removebg-preview.png?raw=true",
     ["Stellar Ed"],
     [HTML,CSS,JS,Firebase,Figma,GeminiAPI,Github,Git],
     new Date(2025,10,30))
 
 let Astryx = new project("Astryx",
-    "A career app that recommends careers and guides users toward achieving them.",
+    "A career app that recommends careers and guides users toward achieving them",
     "assets/App_Icon-removebg-preview.png",
     ["Stellar Ed"],
     [Java,RedisDB,GeminiAPI,Canva,Figma],
     new Date(2026,4,1))
 
 let ZArena = new project("Z-Arena",
-    "An anime card game where strategy and luck decide victory.",
+    "An anime card game where strategy and luck decide victory",
     "assets/z-arena.png",
     ["Stellar Ed"],
     [Java,HTML,CSS,JS,Figma, Git, Github],
@@ -129,6 +129,13 @@ let GravityX = new project("Gravity X",
     "assets/GravityX.png",
     ["Stellar Ed"],
     [HTML,CSS,JS,Figma, Git, Github],
+    new Date(2026,4,1))
+
+let HoopzToGreatness = new project("Hoopz To Greatness",
+    "Hoopz To Greatness is an initiative that uses education to help youth achieve a brighter future",
+    "assets/HTG.png",
+    ["Stellar Ed"],
+    [HTML,CSS,Figma, Git, Github],
     new Date(2026,4,1))
 
 
