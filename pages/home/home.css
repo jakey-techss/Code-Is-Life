@@ -44,7 +44,7 @@ nav {
     background-image: linear-gradient(to right, #464356, #2F2C3A);
 }
 
-#buttons>button:not(#selected) {
+#buttons button:not(#selected) {
     height: 100%;
     border: none;
     font-family: "Share Tech";
@@ -805,7 +805,7 @@ textarea {
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     nav {
@@ -874,7 +874,7 @@ textarea {
     }
 
     .medium {
-        font-size: 18px;
+        font-size: 1.125px;
         width: 80%;
         max-width: 100%;
     }
@@ -942,7 +942,7 @@ textarea {
     }
 
     .title {
-        font-size: 18px;
+        font-size: 1.125rem;
         width: 95%;
     }
 
@@ -975,18 +975,18 @@ textarea {
     }
 
     h1 {
-        font-size: 44px;
+        font-size: 2.75rem;
         line-height: 56px;
     }
 
     .medium {
-        font-size: 18px;
+        font-size: 1.125rem;
         width: 90%;
         max-width: 100%;
     }
 
     .sectionText {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .skill img {
