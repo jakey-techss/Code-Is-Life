@@ -1,335 +1,193 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Code Is Life | Home</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pages/home/home.css">
+    <meta name="description" content="Joshua C. Fineboy-Mark — developer portfolio">
+    <title>Joshua C. Fineboy-Mark | Portfolio</title>
+
     <link rel="icon" href="assets/panda-origami-paper-svgrepo-com.svg">
     <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="pages/home/home.css">
 </head>
 
 <body>
-    <nav>
-        <div id="logo">
-            <img src="assets/panda-origami-paper-svgrepo-com.png">
-            <h3>Code Is Life</h3>
-        </div>
-        <div id="buttons">
-            <button id="selected">Home</button>
-            <a href="#skills"><button>Skills</button></a>
-            <a href="#projects"><button>Projects</button></a>
-            <a href="#contact"><button id="end">Contact</button></a>
-        </div>
-    </nav>
-    <div id="content">
-        <hero class="glass">
-            <div id="topHalf">
-                <div>
-                    <p class="small">Hi, my name is</p>
-                    <h1>Joshua C.<br>Fineboy-Mark</h1>
-                    <p class="medium">I'm a developer focused on web development, AI and software development. I build
-                        impactful
-                        digital solutions and constantly push for innovation. Lets create something great</p>
-                </div>
-                <div>
-                    <p id="binary">1010101010110010101010010101010<br>1010101010010101010101011010101<br>010110101010101
-                    </p>
-                </div>
-            </div>
-            <div id="contactButtons">
-                <button id="contactMe">Contact Me</button>
-                <a href="https://github.com/jakey-techss" target="_blank"><button id="github"><img
-                            src="assets/github-svgrepo-com.png"></button></a>
-            </div>
-        </hero>
-        <section id="skills">
-            <div class="sectionHeader">
-                <div class="searchBar">
-                    <h2 class="sectionText">Skills</h2>
-                    <div class="filterHolder">
-                        <div class="filter" id="skillsFilter">
-                            <button class="glassButton"><img src="assets/filter-svgrepo-com.svg"></button>
-                            <div class="filterBox" id="skillsFilterBox">
-                                <div class="filterContainer">
-                                    <div class="sortBy">
-                                        <p class="titleFilter">Sort By:</p>
-                                        <select>
-                                            <option>Default</option>
-                                            <option>Projects</option>
-                                            <option>Experience</option>
-                                        </select>
-                                    </div>
-                                    <div class="FilterBy">
-                                        <p class="titleFilter">Filters:</p>
-                                        <div class="filterLevelInput">
-                                            <input type="number" placeholder="Minimum Experience">
-                                            <hr>
-                                            <input type="number" placeholder="Maximum Experience">
-                                        </div>
-                                        <div class="filterLevelInput">
-                                            <input type="number" placeholder="Minimum Projects">
-                                            <hr>
-                                            <input type="number" placeholder="Maximum Projects">
-                                        </div>
-                                        <div class="filterLevelCheck">
-                                            <p class="titleFilter">Categories</p>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Web Development</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Software Development</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Game Development</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Machine Learning & AI</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="searchField glassButton">
-                            <input type="text" placeholder="Search...">
-                            <img src="assets/search-svgrepo-com.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="bodySection">
-                <h5 class="sectionTextAdapted">Web Development</h5>
-                <div class="Holder" id="Web">
-                    
-                </div>
-            </section>
-            <section class="bodySection" style="margin-top: 16px;">
-                <h5 class="sectionTextAdapted">Software Development</h5>
-                <div class="Holder" id="software">
-
-                </div>
-            </section>
-            <section class="bodySection" style="margin-top: 16px;">
-                <h5 class="sectionTextAdapted">Machine Learning & AI</h5>
-                <div class="Holder" id="ML">
-                </div>
-            </section>
-            <section class="bodySection" style="margin-top: 16px;">
-                <h5 class="sectionTextAdapted">Others</h5>
-                <div class="Holder" id="game">
-                </div>
-            </section>
-        </section>
-        <section id="creds">
-            <div class="sectionHeader">
-                <div class="searchBar">
-                    <h2 class="sectionText" style="margin-bottom: 0px;">Awards</h2>
-                    <div class="filterHolder">
-                        <div class="filter" id="credsFilter">
-                            <button class="glassButton"><img src="assets/filter-svgrepo-com.svg"></button>
-                            <div class="filterBox" id="credsFilterBox">
-                                <div class="filterContainer">
-                                    <div class="sortBy">
-                                        <p class="titleFilter">Sort By:</p>
-                                        <select>
-                                            <option>Default</option>
-                                            <option>Newest</option>
-                                            <option>Oldest</option>
-                                        </select>
-                                    </div>
-                                    <div class="FilterBy">
-                                        <div class="filterLevelCheck">
-                                            <p class="titleFilter">Categories</p>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Awards</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Certifications</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="searchField glassButton">
-                            <input type="text" placeholder="Search...">
-                            <img src="assets/search-svgrepo-com.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section id="creds">
-                <div class="rowHolder">
-                    <div class="cred">
-                        <img src="assets/AICRED.png">
-                        <p>MIT Data Science & Machine Learning Course </p>
-                    </div>
-                    <div class="cred">
-                        <img src="assets/Business.png">
-                        <p>Rowan University Think Like An Entreprenuer Graduate</p>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <section id="projects">
-            <div class="sectionHeader">
-                <div class="searchBar">
-                    <h2 class="sectionText">Projects</h2>
-                    <div class="filterHolder">
-                        <div class="filter" id="projectsFilter">
-                            <button class="glassButton"><img src="assets/filter-svgrepo-com.svg"></button>
-                            <div class="filterBox" id="projectsFilterBox">
-                                <div class="filterContainer">
-                                    <div class="sortBy">
-                                        <p class="titleFilter">Sort By:</p>
-                                        <select>
-                                            <option>Default</option>
-                                            <option>Newest</option>
-                                            <option>Oldest</option>
-                                        </select>
-                                    </div>
-                                    <div class="FilterBy">
-                                        <div class="filterLevelCheck">
-                                            <p class="titleFilter">Categories</p>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Web Development</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Software Development</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Game Development</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Machine Learning & AI</label>
-                                            </div>
-                                            <div class="inputCheck" style="margin-top: 12px;">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>UI Design</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Competitive Software</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Project Demo</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Testable</label>
-                                            </div>
-
-
-                                            <div class="inputCheck" style="margin-top: 12px;">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>HTML</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>CSS</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>JavaScript</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Python</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Python (ML | AI | Data Science)</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>MIT App Inventor 2</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Firebase</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Redis DB</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Java</label>
-                                            </div>
-                                            <div class="inputCheck">
-                                                <input type="checkbox" id="option1" name="filter" checked>
-                                                <label>Swift UI</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="searchField glassButton">
-                            <input type="text" placeholder="Search...">
-                            <img src="assets/search-svgrepo-com.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="bodySection" style="padding: 0;">
-                <div class="Holder" id="projectList">
-                </div>
-            </section>
-        </section>
-        <section id="contact">
-            <div class="sectionHeader">
-                <div class="searchBar">
-                    <h2 class="sectionText">Contact Me</h2>
-                </div>
-            </div>
-            <section class="bodySection" style="padding: 0;">
-                <div class="glass" id="contactHolder">
-                    <div>
-                        <div class="InputRow">
-                            <div class="textInput">
-                                <label>First Name <img src="assets/error-svgrepo-com.svg"></label>
-                                <input type="text" placeholder="John">
-                            </div>
-                        </div>
-                        <div class="textInput">
-                                <label>Last Name <img src="assets/error-svgrepo-com.svg"></label>
-                                <input type="text" placeholder="Doe">
-                            </div>
-                        <div class="textInput">
-                            <label>Reason</label>
-                            <select>
-                                <option>Project inquiry</option>
-                                <option>Job offer</option>
-                                <option>Feedback</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="textInput">
-                            <label>Message</label>
-                            <textarea placeholder="Hi my name is John Doe..."></textarea>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: center;">
-                            <button id="submit">Submit</button>
-                        </div>
-                </div>
-            </section>
-        </section>
+    <div class="page-bg" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="grid-overlay"></span>
     </div>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="Go to home">
+                <span class="brand-mark">
+                    <img src="assets/panda-origami-paper-svgrepo-com.png" alt="">
+                </span>
+                <span>Code Is Life</span>
+            </a>
+
+            <div class="nav-links">
+                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#credentials">Credentials</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero container" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <span class="eyebrow">DEVELOPER • BUILDER • CREATOR</span>
+                <p class="hero-intro">Hi, my name is</p>
+                <h1 id="hero-title">Joshua C.<br><span>Fineboy-Mark</span></h1>
+                <p class="hero-description">
+                    I'm a developer focused on web development, AI, software development,
+                    and building impactful digital experiences.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contact">Let's Connect <span>↗</span></a>
+                    <a class="button button-secondary" href="https://github.com/jakey-techss" target="_blank" rel="noopener">
+                        GitHub <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-tech" aria-hidden="true">
+                <div class="tech-window">
+                    <div class="window-bar">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="code-lines">
+                        <span><i>const</i> developer = <b>"Joshua"</b>;</span>
+                        <span><i>const</i> focus = [</span>
+                        <span class="indent"><b>"web"</b>, <b>"AI"</b>, <b>"software"</b></span>
+                        <span>];</span>
+                        <span class="comment">// build something meaningful</span>
+                        <span>developer.<em>create</em>(focus);</span>
+                    </div>
+                </div>
+                <div class="floating-chip chip-one">HTML</div>
+                <div class="floating-chip chip-two">AI</div>
+                <div class="floating-chip chip-three">JS</div>
+            </div>
+        </section>
+
+        <section class="section container" id="skills" aria-labelledby="skills-title">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">01 / TOOLKIT</span>
+                    <h2 id="skills-title">Skills</h2>
+                    <p>Technologies I use to turn ideas into working products.</p>
+                </div>
+                <div class="section-controls">
+                    <label class="search">
+                        <span>⌕</span>
+                        <input id="skillsSearch" type="search" placeholder="Search skills..." aria-label="Search skills">
+                    </label>
+                </div>
+            </div>
+
+            <div id="skillsGrid" class="skills-grid"></div>
+        </section>
+
+        <section class="section container" id="credentials" aria-labelledby="credentials-title">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">02 / ACHIEVEMENTS</span>
+                    <h2 id="credentials-title">Certificates & Awards</h2>
+                    <p>Courses, certifications, programs, and achievements.</p>
+                </div>
+                <label class="search">
+                    <span>⌕</span>
+                    <input id="credentialsSearch" type="search" placeholder="Search credentials..." aria-label="Search credentials">
+                </label>
+            </div>
+
+            <div id="credentialsGrid" class="credentials-grid"></div>
+        </section>
+
+        <section class="section container" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">03 / SELECTED WORK</span>
+                    <h2 id="projects-title">Projects</h2>
+                    <p>A selection of things I've designed, coded, and built.</p>
+                </div>
+                <div class="section-controls project-controls">
+                    <label class="search">
+                        <span>⌕</span>
+                        <input id="projectsSearch" type="search" placeholder="Search projects..." aria-label="Search projects">
+                    </label>
+                    <select id="projectSort" aria-label="Sort projects">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="projectFilters" class="filter-pills" aria-label="Project categories"></div>
+            <div id="projectGrid" class="projects-grid"></div>
+        </section>
+
+        <section class="section container" id="contact" aria-labelledby="contact-title">
+            <div class="contact-card">
+                <div class="contact-copy">
+                    <span class="section-kicker">04 / CONTACT</span>
+                    <h2 id="contact-title">Let's build something.</h2>
+                    <p>
+                        Have an idea, project, opportunity, or just want to connect?
+                        Send a message and I'll get back to you.
+                    </p>
+                    <div class="contact-note">Available for projects, collaborations & opportunities.</div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <label>
+                            First Name
+                            <input name="firstName" type="text" placeholder="John" required>
+                        </label>
+                        <label>
+                            Last Name
+                            <input name="lastName" type="text" placeholder="Doe" required>
+                        </label>
+                    </div>
+
+                    <label>
+                        Reason
+                        <select name="reason">
+                            <option>Project inquiry</option>
+                            <option>Job offer</option>
+                            <option>Collaboration</option>
+                            <option>Feedback</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Message
+                        <textarea name="message" placeholder="Tell me about your idea..." required></textarea>
+                    </label>
+
+                    <button class="button button-primary submit-button" type="submit">
+                        Send Message <span>↗</span>
+                    </button>
+                    <p id="formStatus" class="form-status" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <span>© <span id="year"></span> Joshua C. Fineboy-Mark</span>
+        <span>Built with HTML, CSS & JavaScript.</span>
+    </footer>
+
     <script src="pages/home/home.js"></script>
 </body>
-
 </html>

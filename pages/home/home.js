@@ -1,168 +1,472 @@
-let skillsList = [];
-let projectList = [];
-//Classify = "Web","Software","Game","ML"
-class skills {
+/*
+ * PORTFOLIO DATA
+ * ---------------------------------------------------------
+ * To add/edit content, you normally only need to edit:
+ *   1. skillsData
+ *   2. projectsData
+ *   3. credentialsData
+ *
+ * Images use paths relative to your website root.
+ */
 
-    constructor(image, title, experience, tags, classify, id) {
-        this.image = image;
-        this.title = title;
-        this.experience = experience;
-        this.tags = tags;
-        this.classify = classify;
-        this.id = id;
-        skillsList.push(this);
+const skillsData = [
+    {
+        id: "html",
+        title: "HTML",
+        image: "assets/html (1).png",
+        experience: 6,
+        category: "Web Development"
+    },
+    {
+        id: "css",
+        title: "CSS",
+        image: "assets/css.png",
+        experience: 6,
+        category: "Web Development"
+    },
+    {
+        id: "javascript",
+        title: "JavaScript",
+        image: "assets/javascript.png",
+        experience: 3,
+        category: "Web Development"
+    },
+    {
+        id: "python",
+        title: "Python",
+        image: "assets/python.png",
+        experience: 3,
+        category: "Machine Learning & AI"
+    },
+    {
+        id: "firebase",
+        title: "Firebase",
+        image: "assets/firebase.png",
+        experience: 2,
+        category: "Web Development"
+    },
+    {
+        id: "java",
+        title: "Java",
+        image: "assets/java (1).png",
+        experience: 1,
+        category: "Software Development"
+    },
+    {
+        id: "react",
+        title: "React",
+        image: "assets/react.png",
+        experience: 1,
+        category: "Web Development"
+    },
+    {
+        id: "kotlin",
+        title: "Kotlin",
+        image: "assets/kotlin.png",
+        experience: 1,
+        category: "Software Development"
+    },
+    {
+        id: "swift",
+        title: "SwiftUI",
+        image: "assets/swift.png",
+        experience: 2,
+        category: "Software Development"
+    },
+    {
+        id: "redis",
+        title: "RedisDB",
+        image: "assets/redis.png",
+        experience: 1,
+        category: "Software Development"
+    },
+    {
+        id: "flutter",
+        title: "Flutter",
+        image: "assets/flutter.png",
+        experience: 1,
+        category: "Software Development"
+    },
+    {
+        id: "sql",
+        title: "SQL",
+        image: "assets/sql.png",
+        experience: 2,
+        category: "Software Development"
+    },
+    {
+        id: "api",
+        title: "API Development",
+        image: "assets/api.png",
+        experience: 1,
+        category: "Web Development"
+    },
+    {
+        id: "wix",
+        title: "Wix",
+        image: "assets/wix.png",
+        experience: 5,
+        category: "Web Development"
+    },
+    {
+        id: "raspberry-pi",
+        title: "Raspberry Pi",
+        image: "assets/raspberry.png",
+        experience: 2,
+        category: "Hardware & Other"
+    },
+    {
+        id: "git",
+        title: "Git",
+        image: "assets/git.png",
+        experience: 2,
+        category: "Software Development"
+    },
+    {
+        id: "github",
+        title: "GitHub",
+        image: "assets/github.png",
+        experience: 2,
+        category: "Software Development"
+    },
+    {
+        id: "arduino",
+        title: "Arduino",
+        image: "assets/arduino.png",
+        experience: 2,
+        category: "Hardware & Other"
+    },
+    {
+        id: "figma",
+        title: "Figma",
+        image: "assets/figma.png",
+        experience: 2,
+        category: "UI / UX"
+    },
+    {
+        id: "canva",
+        title: "Canva",
+        image: "assets/canva.png",
+        experience: 4,
+        category: "UI / UX"
+    },
+    {
+        id: "3d",
+        title: "3D Printing & Modeling",
+        image: "assets/fusion.png",
+        experience: 1,
+        category: "Hardware & Other"
+    }
+];
+
+const projectsData = [
+    {
+        id: "stellar-ed",
+        title: "Stellar Ed",
+        description: "A student platform for tracking homework, deadlines, and study progress.",
+        image: "https://github.com/jakey-techss/StellarEd/blob/main/assets/Stellar-removebg-preview.png?raw=true",
+        tags: ["Education", "Web", "AI"],
+        tools: ["html", "css", "javascript", "firebase", "figma", "api", "github", "git"],
+        categories: ["Web Development", "Project Demo"],
+        dateCreated: new Date(2025, 10, 30),
+        url: "https://github.com/jakey-techss/StellarEd"
+    },
+    {
+        id: "inventa-software",
+        title: "Inventa",
+        description: "Modular robotics platform with custom hardware and visual node-based programming.",
+        image: "assets/Thumbnail.png",
+        tags: ["Education", "Web", "AI"],
+        tools: ["html", "css", "javascript", "api", "github", "git", "arduino", "3d"],
+        categories: ["Web Development", "Project Demo","Hardware"],
+        dateCreated: new Date(2026, 8, 9),
+        url: "https://inventa-phys-s-12.vercel.app"
+    },
+    {
+        id: "astryx",
+        title: "Astryx",
+        description: "A career app that recommends careers and guides users toward achieving them.",
+        image: "assets/App_Icon-removebg-preview.png",
+        tags: ["Career", "AI", "Software"],
+        tools: ["java", "redis", "api", "canva", "figma"],
+        categories: ["Software Development", "Machine Learning & AI"],
+        dateCreated: new Date(2026, 4, 1)
+    },
+    {
+        id: "z-arena",
+        title: "Z-Arena",
+        description: "An anime card game where strategy and luck decide victory.",
+        image: "assets/z-arena.png",
+        tags: ["Game", "Strategy", "Anime"],
+        tools: ["java", "html", "css", "javascript", "figma", "git", "github"],
+        categories: ["Game Development", "Project Demo"],
+        dateCreated: new Date(2026, 4, 1)
+    },
+    {
+        id: "gravity-x",
+        title: "Gravity X",
+        description: "A physics web game designed to support teachers teaching topics relating to gravity.",
+        image: "assets/GravityX.png",
+        tags: ["Physics", "Education", "Web"],
+        tools: ["html", "css", "javascript", "figma", "git", "github"],
+        categories: ["Web Development", "Game Development", "Project Demo"],
+        dateCreated: new Date(2026, 4, 1)
+    },
+    {
+        id: "hoopz-to-greatness",
+        title: "Hoopz To Greatness",
+        description: "An initiative that uses education to help youth achieve a brighter future.",
+        image: "assets/HTG.png",
+        tags: ["Education", "Community", "Web"],
+        tools: ["html", "css", "figma", "git", "github"],
+        categories: ["Web Development", "Project Demo"],
+        dateCreated: new Date(2026, 4, 1)
+    }
+];
+
+const credentialsData = [
+    {
+        id: "mit-data-science",
+        title: "MIT Data Science & Machine Learning Course",
+        type: "Certification",
+        image: "assets/AICRED.png",
+        date: "2025"
+    },
+    {
+        id: "rowan-entrepreneur",
+        title: "Rowan University Think Like An Entrepreneur Graduate",
+        type: "Award / Program",
+        image: "assets/Business.png",
+        date: "2025"
+    }
+];
+
+/* =========================================================
+   RENDERING
+   ========================================================= */
+
+const $ = (selector) => document.querySelector(selector);
+
+const state = {
+    skillSearch: "",
+    credentialSearch: "",
+    projectSearch: "",
+    projectCategory: "All",
+    projectSort: "newest"
+};
+
+function escapeHTML(value) {
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+function formatDate(date) {
+    return new Intl.DateTimeFormat("en-US", {
+        month: "short",
+        year: "numeric"
+    }).format(date);
+}
+
+function getProjectCount(skillId) {
+    return projectsData.filter(project => project.tools.includes(skillId)).length;
+}
+
+function renderSkills() {
+    const container = $("#skillsGrid");
+    const query = state.skillSearch.trim().toLowerCase();
+
+    const filtered = skillsData.filter(skill =>
+        `${skill.title} ${skill.category}`.toLowerCase().includes(query)
+    );
+
+    if (!filtered.length) {
+        container.innerHTML = `<div class="empty-state">No skills found.</div>`;
+        return;
     }
 
-}
-class project {
-    constructor(title, description, image, tags, tools, dateCreated) {
-        this.title = title;
-        this.description = description;
-        this.image = image;
-        this.tags = tags;
-        this.tools = tools;
-        this.dateCreated = dateCreated;
-        projectList.push(this);
-        if (projectList.length < 6) {
-            let project = document.createElement('div');
-            project.classList.add("lefter");
-            project.innerHTML = `<div>
-                            <div class="project">
-                                <div class="projectContainer">
-                                    <img src="${this.image}">
-                                </div>
-                                <p>${this.title}</p>
-                            </div>
-                        </div>
-                        <div class="projectInfoHolder">
-                            <div class="projectInfo">
-                                <p class="Details">Project Summary</p>
-                                <hr>
-                                <p class="projectDescription">${this.description}</p>
-                                <hr>
-                                <div class="tagContainer" id="${this.title}toolHolder">
-                                    
-                                </div>
-                            </div>
-                            <div class="endAlign">
-                                <a>View Project</a>
-                            </div>
-                        </div>`
+    const categories = [...new Set(skillsData.map(skill => skill.category))];
 
-            document.getElementById("projectList").appendChild(project);
-            this.tools.map((tool) => {
-                let toolElement = document.createElement('div');
-                toolElement.classList.add("tag");
-                toolElement.innerHTML = `${tool.title}`;
-                document.getElementById(this.title + "toolHolder").appendChild(toolElement);
-            })
+    container.innerHTML = categories
+        .map(category => {
+            const skills = filtered.filter(skill => skill.category === category);
+
+            if (!skills.length) return "";
+
+            return `
+                <div class="skill-group">
+                    <div class="skill-group-title">${escapeHTML(category)}</div>
+                    <div class="skills-grid">
+                        ${skills.map(skill => `
+                            <article class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="${escapeHTML(skill.image)}" alt="" loading="lazy">
+                                </div>
+                                <div>
+                                    <h3 class="skill-name">${escapeHTML(skill.title)}</h3>
+                                    <p class="skill-meta">${skill.experience} ${skill.experience === 1 ? "year" : "years"} experience</p>
+                                    <p class="skill-projects">${getProjectCount(skill.id)} ${getProjectCount(skill.id) === 1 ? "project" : "projects"}</p>
+                                </div>
+                            </article>
+                        `).join("")}
+                    </div>
+                </div>
+            `;
+        })
+        .join("");
+}
+
+function renderCredentials() {
+    const container = $("#credentialsGrid");
+    const query = state.credentialSearch.trim().toLowerCase();
+
+    const filtered = credentialsData.filter(item =>
+        `${item.title} ${item.type} ${item.date}`.toLowerCase().includes(query)
+    );
+
+    container.innerHTML = filtered.length
+        ? filtered.map(item => `
+            <article class="credential-card">
+                <div class="credential-image">
+                    <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.title)}" loading="lazy">
+                </div>
+                <div class="credential-content">
+                    <div class="credential-type">${escapeHTML(item.type)}</div>
+                    <h3 class="credential-title">${escapeHTML(item.title)}</h3>
+                    <p class="credential-date">${escapeHTML(item.date)}</p>
+                </div>
+            </article>
+        `).join("")
+        : `<div class="empty-state">No credentials found.</div>`;
+}
+
+function renderProjectFilters() {
+    const categories = [
+        "All",
+        ...new Set(projectsData.flatMap(project => project.categories))
+    ];
+
+    $("#projectFilters").innerHTML = categories.map(category => `
+        <button
+            class="filter-pill ${state.projectCategory === category ? "active" : ""}"
+            type="button"
+            data-category="${escapeHTML(category)}"
+        >
+            ${escapeHTML(category)}
+        </button>
+    `).join("");
+}
+
+function renderProjects() {
+    const container = $("#projectGrid");
+    const query = state.projectSearch.trim().toLowerCase();
+
+    let filtered = projectsData.filter(project => {
+        const matchesSearch =
+            `${project.title} ${project.description} ${project.tags.join(" ")} ${project.categories.join(" ")}`
+                .toLowerCase()
+                .includes(query);
+
+        const matchesCategory =
+            state.projectCategory === "All" ||
+            project.categories.includes(state.projectCategory);
+
+        return matchesSearch && matchesCategory;
+    });
+
+    filtered.sort((a, b) => {
+        if (state.projectSort === "name") {
+            return a.title.localeCompare(b.title);
         }
 
-    }
+        const difference = a.dateCreated - b.dateCreated;
+        return state.projectSort === "oldest" ? difference : -difference;
+    });
+
+    container.innerHTML = filtered.length
+        ? filtered.map(project => `
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="${escapeHTML(project.image)}" alt="${escapeHTML(project.title)}" loading="lazy">
+                </div>
+
+                <div class="project-content">
+                    <div class="project-date">${formatDate(project.dateCreated)}</div>
+                    <h3 class="project-title">${escapeHTML(project.title)}</h3>
+                    <p class="project-description">${escapeHTML(project.description)}</p>
+
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `
+                            <span class="tag">${escapeHTML(tag)}</span>
+                        `).join("")}
+                    </div>
+
+                    ${project.url ? `
+                        <a class="project-link" href="${escapeHTML(project.url)}" target="_blank" rel="noopener">
+                            View Project ↗
+                        </a>
+                    ` : ""}
+                </div>
+            </article>
+        `).join("")
+        : `<div class="empty-state">No projects found.</div>`;
 }
 
-//Skills
-let HTML = new skills("assets/html (1).png",
-    "HTML", 6, ["Web Development"], "Web", "Skill-1");
-let CSS = new skills("assets/css.png",
-    "CSS", 6, ["Web Development"], "Web", "Skill-2");
-let JS = new skills("assets/javascript.png",
-    "JS ", 3, ["Web Development"], "Web", "Skill-3");
-let Python = new skills("assets/python.png",
-    "Python ", 3, ["Web Development"], "ML", "Skill-4");
-let Firebase = new skills("assets/firebase.png",
-    "Firebase ", 2, ["Web Development"], "Web", "Skill-5");
-let Java = new skills("assets/java (1).png",
-    "Java ", 1, ["Web Development"], "Software", "Skill-6");
-let React = new skills("assets/react.png",
-    "React ", 1, ["Web Development"], "Web", "Skill-7");
-let Kotlin = new skills("assets/kotlin.png",
-    "Kotlin ", 1, ["Web Development"], "Software", "Skill-8");
-let Swift = new skills("assets/swift.png",
-    "Swift UI", 2, ["Web Development"], "Software", "Skill-9");
-let RedisDB = new skills("assets/redis.png",
-    "RedisDB ", 1, ["Web Development"], "Software", "Skill-10");
-let Flutter = new skills("assets/flutter.png",
-    "Futter", 1, ["Web Development"], "Software", "Skill-11");
-let SQL = new skills("assets/sql.png",
-    "SQL", 2, ["Web Development"], "Game", "Skill-12");
-let GeminiAPI = new skills("assets/api.png",
-    "API", 1, ["Web Development"], "Web", "Skill-13");
-let Wix = new skills("assets/wix.png",
-    "Wix", 5, ["Web Development"], "Web", "Skill-14");
-let raspPI = new skills("assets/raspberry.png",
-    "Rasp PI", 2, ["Web Development"], "Game", "Skill-15");
-let Git = new skills("assets/git.png",
-    "Git", 2, ["Web Development"], "Game", "Skill-16");
-let Github = new skills("assets/github.png",
-    "Github", 2, ["Web Development"], "Game", "Skill-17");
-let Arduino = new skills("assets/arduino.png",
-    "Arduino", 2, ["Web Development"], "Game", "Skill-18");
-let Figma = new skills("assets/figma.png",
-    "Figma", 2, ["Web Development"], "Game", "Skill-19");
-let Canva = new skills("assets/canva.png",
-    "Canva", 4, ["Web Development"], "Game", "Skill-20");
-//Projects
-let StellarEd = new project("Stellar Ed",
-    "A student platform for tracking homework, deadlines, and study progress",
-    "https://github.com/jakey-techss/StellarEd/blob/main/assets/Stellar-removebg-preview.png?raw=true",
-    ["Stellar Ed"],
-    [HTML, CSS, JS, Firebase, Figma, GeminiAPI, Github, Git],
-    new Date(2025, 10, 30))
+/* =========================================================
+   INTERACTION
+   ========================================================= */
 
-let Astryx = new project("Astryx",
-    "A career app that recommends careers and guides users toward achieving them",
-    "assets/App_Icon-removebg-preview.png",
-    ["Stellar Ed"],
-    [Java, RedisDB, GeminiAPI, Canva, Figma],
-    new Date(2026, 4, 1))
+$("#skillsSearch").addEventListener("input", event => {
+    state.skillSearch = event.target.value;
+    renderSkills();
+});
 
-let ZArena = new project("Z-Arena",
-    "An anime card game where strategy and luck decide victory",
-    "assets/z-arena.png",
-    ["Stellar Ed"],
-    [Java, HTML, CSS, JS, Figma, Git, Github],
-    new Date(2026, 4, 1))
+$("#credentialsSearch").addEventListener("input", event => {
+    state.credentialSearch = event.target.value;
+    renderCredentials();
+});
 
-let GravityX = new project("Gravity X",
-    "A physics web game to support teachers teaching topics relating to gravity",
-    "assets/GravityX.png",
-    ["Stellar Ed"],
-    [HTML, CSS, JS, Figma, Git, Github],
-    new Date(2026, 4, 1))
+$("#projectsSearch").addEventListener("input", event => {
+    state.projectSearch = event.target.value;
+    renderProjects();
+});
 
-let HoopzToGreatness = new project("Hoopz To Greatness",
-    "Hoopz To Greatness is an initiative that uses education to help youth achieve a brighter future",
-    "assets/HTG.png",
-    ["Stellar Ed"],
-    [HTML, CSS, Figma, Git, Github],
-    new Date(2026, 4, 1))
+$("#projectSort").addEventListener("change", event => {
+    state.projectSort = event.target.value;
+    renderProjects();
+});
 
+$("#projectFilters").addEventListener("click", event => {
+    const button = event.target.closest("[data-category]");
+    if (!button) return;
 
+    state.projectCategory = button.dataset.category;
+    renderProjectFilters();
+    renderProjects();
+});
 
+$("#contactForm").addEventListener("submit", event => {
+    event.preventDefault();
 
+    const status = $("#formStatus");
+    status.textContent = "Thanks! Your message form is ready to connect to your email/backend service.";
 
+    event.target.reset();
+});
 
-skillsList.map((element) => {
-    let skill = document.createElement('div');
-    skill.classList.add('skill');
-    skill.innerHTML = `<div class="skill_img"><img src="${element.image}"></div>
-                        <div class="info">
-                            <h6 class="title">${element.title}</h6>
-                            <p class="exp">${element.experience} Years Experience</p>
-                            <p class="projects">${projectList.filter((project) => {
-        if (project.tools.includes(element)) {
-            return element;
-        }
-    }).length} Projects</p>
-                        </div>`
-    if (element.classify.toLowerCase() == "Web".toLowerCase()) {
-        document.getElementById("Web").appendChild(skill);
-    } else if (element.classify.toLowerCase() == "Software".toLowerCase()) {
-        document.getElementById("software").appendChild(skill);
-    } else if (element.classify.toLowerCase() == "Game".toLowerCase()) {
-        document.getElementById("game").appendChild(skill);
-    } else {
-        document.getElementById("ML").appendChild(skill);
-    }
-})
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+        document.querySelectorAll(".nav-link").forEach(item => item.classList.remove("active"));
+        link.classList.add("active");
+    });
+});
+
+$("#year").textContent = new Date().getFullYear();
+
+renderSkills();
+renderCredentials();
+renderProjectFilters();
+renderProjects();
