@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Joshua C. Fineboy-Mark — projects and experiments">
+
+    <title>Projects | Code Is Life</title>
+
+    <link rel="icon" href="/assets/panda-origami-paper-svgrepo-com.svg">
+    <link rel="stylesheet" href="/assets/fonts.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+
+    <div class="page-bg" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="grid-overlay"></span>
+    </div>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+
+            <a class="brand" href="/index.html" aria-label="Go to home">
+                <span class="brand-mark">
+                    <img src="/assets/panda-origami-paper-svgrepo-com.png" alt="">
+                </span>
+
+                <span>Code Is Life</span>
+            </a>
+
+            <div class="nav-links">
+                <a class="nav-link" href="/index.html#home">Home</a>
+                <a class="nav-link" href="/index.html#skills">Skills</a>
+                <a class="nav-link" href="/index.html#credentials">
+                    Credentials
+                </a>
+                <a class="nav-link active" href="projects.html">
+                    Projects
+                </a>
+                <a class="nav-link" href="/index.html#logs">Logs</a>
+                <a class="nav-link" href="/index.html#contact">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+
+        <section class="projects-intro container">
+
+            <span class="section-kicker">
+                01 / PROJECTS
+            </span>
+
+            <h1>
+                Things I've<br>
+                <span>built.</span>
+            </h1>
+
+            <p>
+                A collection of software, games, experiments, and ideas
+                I'm building from the ground up.
+            </p>
+
+        </section>
+
+
+
+        <section class="featured-section container" aria-labelledby="featured-title">
+
+            <div class="featured-label">
+                <span class="section-kicker">
+                    FEATURED PROJECT
+                </span>
+
+                <span class="featured-status">
+                    IN DEVELOPMENT
+                </span>
+            </div>
+
+
+            <article class="featured-project">
+
+                <div class="featured-art">
+
+                    <div class="featured-glow"></div>
+
+                    <img src="assets/projects/asteria.png" alt="Asteria project">
+
+                    <div class="featured-art-overlay"></div>
+
+                    <span class="featured-category">
+                        GAME DEVELOPMENT
+                    </span>
+
+                </div>
+
+
+                <div class="featured-content">
+
+                    <span class="featured-number">
+                        PROJECT 01
+                    </span>
+
+                    <h2 id="featured-title">
+                        Asteria
+                    </h2>
+
+                    <p class="featured-description">
+                        A deep-space puzzle RPG focused on exploration,
+                        problem solving, science, and survival — without
+                        traditional combat.
+                    </p>
+
+
+                    <div class="featured-tags">
+                        <span>Godot</span>
+                        <span>GDScript</span>
+                        <span>Multiplayer</span>
+                        <span>Puzzle RPG</span>
+                    </div>
+
+
+                    <div class="featured-meta">
+
+                        <div>
+                            <span class="meta-label">STATUS</span>
+                            <strong>Building</strong>
+                        </div>
+
+                        <div>
+                            <span class="meta-label">TYPE</span>
+                            <strong>Game</strong>
+                        </div>
+
+                        <div>
+                            <span class="meta-label">YEAR</span>
+                            <strong>2026</strong>
+                        </div>
+
+                    </div>
+
+
+                    <a class="featured-button" href="projects/asteria.html">
+                        View Project
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="all-projects container" aria-labelledby="all-projects-title">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-kicker">
+                        02 / COLLECTION
+                    </span>
+
+                    <h2 id="all-projects-title">
+                        All Projects
+                    </h2>
+
+                    <p>
+                        Explore everything I've worked on.
+                    </p>
+                </div>
+
+                <label class="search">
+                    <span>⌕</span>
+
+                    <input id="projectSearch" type="search" placeholder="Search projects..."
+                        aria-label="Search projects">
+                </label>
+
+            </div>
+
+
+            <div id="projectFilters" class="filter-pills" aria-label="Project categories"></div>
+
+
+            <div id="projectGrid" class="project-grid"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer container">
+
+        <span>
+            © <span id="year"></span> Joshua C. Fineboy-Mark
+        </span>
+
+    </footer>
+
+
+    <script src="projects.js"></script>
+
+</body>
+
+</html>

@@ -1,13 +1,3 @@
-/*
- * PORTFOLIO DATA
- * ---------------------------------------------------------
- * To add/edit content, you normally only need to edit:
- *   1. skillsData
- *   2. projectsData
- *   3. credentialsData
- *
- * Images use paths relative to your website root.
- */
 
 const skillsData = [
     {
@@ -241,9 +231,73 @@ const credentialsData = [
     }
 ];
 
-/* =========================================================
-   RENDERING
-   ========================================================= */
+const logsData = [
+    {
+        id: "ai-lab-progress",
+        project: "AI//LAB",
+        description: "Building the AI//LAB learning platform and refining its curriculum, gamification, projects, and interactive learning experience.",
+        date: new Date(2026, 8, 4),
+        icon: "assets/ai-lab-icon.png",
+        url: "logs/ai-lab.html"
+    },
+    {
+        id: "game-development",
+        project: "Asteria",
+        description: "Exploring the core gameplay systems, puzzle mechanics, multiplayer structure, and visual direction for the space-based RPG.",
+        date: new Date(2026, 7, 25),
+        icon: "assets/asteria-icon.png",
+        url: "logs/asteria.html"
+    },
+    {
+        id: "inventa-progress",
+        project: "Inventa",
+        description: "Continuing development of the robotics platform, including the interface, hardware integration, and visual programming experience.",
+        date: new Date(2026, 7, 20),
+        icon: "assets/inventa-icon.png",
+        url: "logs/inventa.html"
+    }
+];
+
+function renderLogs() {
+    const container = $("#logsGrid");
+
+    const sortedLogs = [...logsData]
+        .sort((a, b) => b.date - a.date);
+
+    container.innerHTML = sortedLogs.length
+        ? sortedLogs.map(log => `
+            <article class="log-card">
+                <div class="log-icon">
+                    <img
+                        src="${escapeHTML(log.icon)}"
+                        alt=""
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="log-content">
+                    <div class="log-top">
+                        <span class="log-date">${formatDate(log.date)}</span>
+                    </div>
+
+                    <h3 class="log-title">${escapeHTML(log.project)}</h3>
+
+                    <p class="log-description">
+                        ${escapeHTML(log.description)}
+                    </p>
+
+                    <a
+                        class="log-link"
+                        href="${escapeHTML(log.url)}"
+                    >
+                        Read Log <span>↗</span>
+                    </a>
+                </div>
+            </article>
+        `).join("")
+        : `<div class="empty-state">No recent logs.</div>`;
+}
+
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -415,9 +469,6 @@ function renderProjects() {
         : `<div class="empty-state">No projects found.</div>`;
 }
 
-/* =========================================================
-   INTERACTION
-   ========================================================= */
 
 $("#skillsSearch").addEventListener("input", event => {
     state.skillSearch = event.target.value;
@@ -470,3 +521,4 @@ renderSkills();
 renderCredentials();
 renderProjectFilters();
 renderProjects();
+renderLogs();
