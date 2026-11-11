@@ -36,6 +36,13 @@ const skillsData = [
         category: "Web Development"
     },
     {
+        id: "supabase",
+        title: "Supabase",
+        image: "assets/supabase.png",
+        experience: 1,
+        category: "Web Development"
+    },
+    {
         id: "java",
         title: "Java",
         image: "assets/java (1).png",
@@ -159,7 +166,7 @@ const projectsData = [
         tools: ["html", "css", "javascript", "firebase", "figma", "api", "github", "git"],
         categories: ["Web Development", "Project Demo"],
         dateCreated: new Date(2025, 10, 30),
-        url: "https://github.com/jakey-techss/StellarEd"
+        url: "https://stellar-ed.vercel.app"
     },
     {
         id: "inventa-software",
@@ -180,7 +187,8 @@ const projectsData = [
         tags: ["Career", "AI", "Software"],
         tools: ["java", "redis", "api", "canva", "figma"],
         categories: ["Software Development", "Machine Learning & AI"],
-        dateCreated: new Date(2026, 4, 1)
+        dateCreated: new Date(2026, 4, 1),
+        url: "https://youtube.com/shorts/nOVElGq8c-w?feature=share"
     },
     {
         id: "z-arena",
@@ -190,7 +198,8 @@ const projectsData = [
         tags: ["Game", "Strategy", "Anime"],
         tools: ["java", "html", "css", "javascript", "figma", "git", "github"],
         categories: ["Game Development", "Project Demo"],
-        dateCreated: new Date(2026, 4, 1)
+        dateCreated: new Date(2026, 4, 1),
+        url: "https://github.com/jakey-techss/Z-Arena"
     },
     {
         id: "gravity-x",
@@ -200,7 +209,8 @@ const projectsData = [
         tags: ["Physics", "Education", "Web"],
         tools: ["html", "css", "javascript", "figma", "git", "github"],
         categories: ["Web Development", "Game Development", "Project Demo"],
-        dateCreated: new Date(2026, 4, 1)
+        dateCreated: new Date(2026, 4, 1),
+        url: "https://gravity-x-one.vercel.app"
     },
     {
         id: "hoopz-to-greatness",
@@ -210,7 +220,8 @@ const projectsData = [
         tags: ["Education", "Community", "Web"],
         tools: ["html", "css", "figma", "git", "github"],
         categories: ["Web Development", "Project Demo"],
-        dateCreated: new Date(2026, 4, 1)
+        dateCreated: new Date(2026, 4, 1),
+         url: "https://hoopztogreatness.com"
     }
 ];
 
