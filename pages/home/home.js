@@ -201,17 +201,7 @@ const instagramPosts = [
   {
     label: "THE CHALLENGE",
     title: "96 Builds. 24 Months.",
-    url: "https://www.instagram.com/",
-  },
-  {
-    label: "BUILD LOG",
-    title: "Planning the first product",
-    url: "https://www.instagram.com/",
-  },
-  {
-    label: "UNDER THE HOOD",
-    title: "Engineering decisions",
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/p/DfvVoQEgeoc/",
   },
 ];
 
@@ -535,11 +525,6 @@ document.querySelector("#contactForm").addEventListener("submit", (event) => {
       `${data.get("message")}`,
   );
 
-  if (recipient === "YOUR_EMAIL@example.com") {
-    document.querySelector("#formStatus").textContent =
-      "Add your email address in home.js to activate the contact form.";
-    return;
-  }
 
   window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
