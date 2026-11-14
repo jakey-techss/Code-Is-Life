@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engineering notes, daily build logs, experiments, and thoughts.">
+    <title>Journal | Engineering Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pages/home/home.css">
+    <link rel="stylesheet" href="pages/journal/journal.css">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="#home">
+                <span class="brand-mark">JF</span>
+                <span class="brand-name">CODE IS LIFE</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link active " href="#journal">Journal</a>
+            </div>
+            <a class="nav-cta" href="https://github.com/jakey-techss" target="_blank" rel="noopener">GitHub ↗</a>
+        </nav>
+    </header>
+
+    <main class="journal-page">
+
+        <section class="journal-hero">
+            <div class="hero-topline">
+                <span><i class="status-dot"></i> PERSONAL ENGINEERING JOURNAL</span>
+                <span>EST. 2026</span>
+            </div>
+
+            <div class="hero-content">
+                <div>
+                    <p class="eyebrow">THOUGHTS, BUILDS & EVERYTHING IN BETWEEN</p>
+                    <h1>The work<br>behind the <span>work.</span></h1>
+                    <p class="hero-description">
+                        Not everything happens in the final product.
+                        This is where I document the process — the technical
+                        decisions, the late-night debugging, the small wins,
+                        and the occasional "why isn't this working?"
+                    </p>
+
+                    <a href="#journal-feed" class="hero-button">
+                        Explore the journal <span>↓</span>
+                    </a>
+                </div>
+
+                <div class="hero-side-note">
+                    <div class="side-note-line"></div>
+                    <p>BUILDING IN PUBLIC.</p>
+                    <p>LEARNING AS I GO.</p>
+                    <p>FIGURING IT OUT.</p>
+                    <span>SCROLL TO EXPLORE ↓</span>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <span>01 — ENGINEERING NOTES</span>
+                <span>02 — DAILY LOGS</span>
+                <span>03 — RANDOM THOUGHTS</span>
+            </div>
+        </section>
+
+        <section class="journal-types" aria-label="Journal categories">
+            <button class="journal-type-card technical-type" data-filter="technical">
+                <div class="type-top">
+                    <span>01 / TECHNICAL</span>
+                    <span class="type-arrow">↗</span>
+                </div>
+                <div class="type-icon">&lt;/&gt;</div>
+                <h2>Engineering<br>Notes</h2>
+                <p>
+                    The deeper stuff. How I built something, why I chose
+                    a particular architecture, what I learned, and how
+                    I solved difficult technical problems.
+                </p>
+                <span class="type-footer">CODE · SYSTEMS · BREAKDOWNS</span>
+            </button>
+
+            <button class="journal-type-card daily-type" data-filter="daily">
+                <div class="type-top">
+                    <span>02 / PERSONAL</span>
+                    <span class="type-arrow">↗</span>
+                </div>
+                <div class="type-icon">✳</div>
+                <h2>Daily<br>Logs</h2>
+                <p>
+                    The casual side. What I worked on today, what went
+                    wrong, what I figured out, and whatever else happened
+                    along the way.
+                </p>
+                <span class="type-footer">PROGRESS · REFLECTIONS · LIFE</span>
+            </button>
+        </section>
+
+        <section class="journal-feed-section" id="journal-feed">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE ARCHIVE</p>
+                    <h2>Latest entries<span>.</span></h2>
+                    <p class="section-description">
+                        A running record of things I've been working on.
+                    </p>
+                </div>
+                <div class="entry-count" id="entryCount">00 ENTRIES</div>
+            </div>
+
+            <div class="journal-toolbar">
+                <div class="journal-filters">
+                    <button class="filter-button active" data-filter="all">Everything</button>
+                    <button class="filter-button" data-filter="technical">Technical</button>
+                    <button class="filter-button" data-filter="daily">Daily logs</button>
+                </div>
+
+                <label class="journal-search">
+                    <span>⌕</span>
+                    <input id="journalSearch" type="search" placeholder="Search entries...">
+                </label>
+            </div>
+
+            <div class="journal-grid" id="journalGrid">
+                <!-- Entries are rendered from data/journal.js -->
+            </div>
+
+            <div class="empty-state" id="emptyState" hidden>
+                <span>∅</span>
+                <h3>No entries found.</h3>
+                <p>Try another search or category.</p>
+            </div>
+        </section>
+
+        <section class="journal-note">
+            <div class="note-symbol">✳</div>
+            <div>
+                <p class="eyebrow">A NOTE TO MYSELF</p>
+                <h2>Document the process.<br><span>Not just the outcome.</span></h2>
+                <p>
+                    Every finished project has a story behind it.
+                    I don't want to forget the experiments, mistakes,
+                    and little discoveries that got me there.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <span>ENGINEERING PORTFOLIO © 2026</span>
+        <span>BUILT WITH CURIOSITY <span class="footer-green">✳</span></span>
+        <a href="index.html">BACK HOME ↑</a>
+    </footer>
+
+    <div class="article-overlay" id="articleOverlay" aria-hidden="true">
+        <article class="article-reader">
+            <button class="reader-close" id="readerClose" aria-label="Close article">×</button>
+            <div id="articleContent"></div>
+        </article>
+    </div>
+
+    <script src="data/journal.js"></script>
+    <script src="pages/journal/journal.js"></script>
+</body>
+</html>

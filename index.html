@@ -4,198 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joshua C. Fineboy-Mark — developer portfolio">
-    <title>Joshua C. Fineboy-Mark | Portfolio</title>
-
+    <meta name="description"
+        content="Joshua C. Fineboy-Mark — software engineering portfolio, projects, build logs, and technical writing.">
+    <meta name="theme-color" content="#090b0d">
+    <title>Joshua C. Fineboy-Mark | Engineering Portfolio</title>
     <link rel="icon" href="assets/panda-origami-paper-svgrepo-com.svg">
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="pages/home/home.css">
 </head>
 
 <body>
-    <div class="page-bg" aria-hidden="true">
-        <span class="orb orb-one"></span>
-        <span class="orb orb-two"></span>
-        <span class="grid-overlay"></span>
-    </div>
-
+    <div class="site-noise" aria-hidden="true"></div>
     <header class="site-header">
         <nav class="nav container" aria-label="Main navigation">
-            <a class="brand" href="#home" aria-label="Go to home">
-                <span class="brand-mark">
-                    <img src="assets/panda-origami-paper-svgrepo-com.png" alt="">
-                </span>
-                <span>Code Is Life</span>
+            <a class="brand" href="#home">
+                <span class="brand-mark">JF</span>
+                <span class="brand-name">CODE IS LIFE</span>
             </a>
-
-            <div class="nav-links">
-                <a class="nav-link active" href="#home">Home</a>
-                <a class="nav-link" href="#skills">Skills</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a class="nav-link active" href="#home">Overview</a>
+                <a class="nav-link" href="#marathon">Marathon</a>
+                <a class="nav-link" href="#skills">Toolkit</a>
                 <a class="nav-link" href="#credentials">Credentials</a>
-                <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#logs">Logs</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="#journal">Journal</a>
                 <a class="nav-link" href="#contact">Contact</a>
             </div>
+            <a class="nav-cta" href="https://github.com/jakey-techss" target="_blank" rel="noopener">GitHub ↗</a>
         </nav>
     </header>
 
     <main id="home">
-        <section class="hero container" aria-labelledby="hero-title">
+        <section class="hero container">
             <div class="hero-copy">
-                <span class="eyebrow">DEVELOPER • BUILDER • CREATOR</span>
-                <p class="hero-intro">Hi, my name is</p>
-                <h1 id="hero-title">Joshua C.<br><span>Fineboy-Mark</span></h1>
-                <p class="hero-description">
-                    I'm a developer focused on web development, AI, software development,
-                    and building impactful digital experiences.
-                </p>
-
+                <div class="status-line"><span class="status-dot"></span> SOFTWARE ENGINEERING · BUILDING IN PUBLIC
+                </div>
+                <p class="hero-intro">Hello, I'm</p>
+                <h1>Joshua C.<br><span>Fineboy-Mark</span></h1>
+                <p class="hero-description">I build software to solve problems, explore ideas, and make useful
+                    technology accessible. This is where I document the engineering behind the things I create.</p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#contact">Let's Connect <span>↗</span></a>
-                    <a class="button button-secondary" href="https://github.com/jakey-techss" target="_blank"
-                        rel="noopener">
-                        GitHub <span>↗</span>
-                    </a>
+                    <a class="button button-primary" href="#marathon">Explore the marathon <span>↘</span></a>
+                    <a class="button button-secondary" href="#contact">Get in touch <span>↗</span></a>
+                </div>
+                <div class="hero-meta">
+                    <span><b>01</b> Engineer in progress</span>
+                    <span><b>02</b> Product-focused</span>
+                    <span><b>03</b> Always learning</span>
                 </div>
             </div>
+            <div class="hero-console">
+                <div class="console-top"><span class="console-lights"><i></i><i></i><i></i></span><span>joshua@build-log
+                        ~ %</span><span>LIVE</span></div>
+                <div class="console-body">
+                    <p class="console-comment">// the long-term objective</p>
+                    <p><span class="syntax-purple">const</span> roadmap = {</p>
+                    <p class="indent"><span class="syntax-blue">duration</span>: <span class="syntax-green">"24
+                            months"</span>,</p>
+                    <p class="indent"><span class="syntax-blue">builds</span>: <span class="syntax-orange">96</span>,
+                    </p>
+                    <p class="indent"><span class="syntax-blue">focus</span>: [</p>
+                    <p class="indent2"><span class="syntax-green">"software"</span>, <span
+                            class="syntax-green">"systems"</span>,</p>
+                    <p class="indent2"><span class="syntax-green">"engineering"</span>, <span
+                            class="syntax-green">"impact"</span></p>
+                    <p class="indent">]</p>
+                    <p>};</p>
+                    <p class="console-comment">// learn by building. improve by shipping.</p>
+                    <p><span class="syntax-purple">await</span> roadmap.<span class="syntax-yellow">start</span>();<span
+                            class="cursor">▌</span></p>
+                </div>
+                <div class="console-footer"><span>STATUS: PREPARING TO SHIP</span><span>BUILD.LOG / 001</span></div>
+            </div>
+        </section>
 
-            <div class="hero-tech" aria-hidden="true">
-                <div class="tech-window">
-                    <div class="window-bar">
-                        <span></span><span></span><span></span>
+        <section class="marathon-section section" id="marathon">
+            <div class="container">
+                <div class="section-heading section-heading-wide">
+                    <div>
+                        <span class="section-kicker">01 / THE MAIN EVENT</span>
+                        <h2>The Coding <span>Marathon.</span></h2>
+                        <p>24 months. 96 builds. A public record of learning how to engineer better software.</p>
                     </div>
-                    <div class="code-lines">
-                        <span><i>const</i> developer = <b>"Joshua"</b>;</span>
-                        <span><i>const</i> focus = [</span>
-                        <span class="indent"><b>"web"</b>, <b>"AI"</b>, <b>"software"</b></span>
-                        <span>];</span>
-                        <span class="comment">// build something meaningful</span>
-                        <span>developer.<em>create</em>(focus);</span>
+                    <div class="marathon-counter">
+                        <strong>24<span>MO</span></strong><i></i><strong>96<span>BUILDS</span></strong>
                     </div>
                 </div>
-                <div class="floating-chip chip-one">HTML</div>
-                <div class="floating-chip chip-two">AI</div>
-                <div class="floating-chip chip-three">JS</div>
-            </div>
-        </section>
-
-        <section class="section container" id="skills" aria-labelledby="skills-title">
-            <div class="section-heading">
-                <div>
-                    <span class="section-kicker">01 / TOOLKIT</span>
-                    <h2 id="skills-title">Skills</h2>
-                    <p>Technologies I use to turn ideas into working products.</p>
+                <div class="marathon-banner">
+                    <div><span class="mini-label">ENGINEERING ROADMAP / 2026—2028</span>
+                        <h3>One week. One product. Every week.</h3>
+                        <p>Each build is an opportunity to learn a technology, solve a real problem, and document the
+                            decisions behind the result.</p>
+                    </div>
+                    <a class="text-link" href="#projects">Browse builds <span>↗</span></a>
                 </div>
-                <div class="section-controls">
-                    <label class="search">
-                        <span>⌕</span>
-                        <input id="skillsSearch" type="search" placeholder="Search skills..."
-                            aria-label="Search skills">
-                    </label>
-                </div>
-            </div>
-
-            <div id="skillsGrid" class="skills-grid"></div>
-        </section>
-
-        <section class="section container" id="credentials" aria-labelledby="credentials-title">
-            <div class="section-heading">
-                <div>
-                    <span class="section-kicker">02 / ACHIEVEMENTS</span>
-                    <h2 id="credentials-title">Certificates & Awards</h2>
-                    <p>Courses, certifications, programs, and achievements.</p>
-                </div>
-                <label class="search">
-                    <span>⌕</span>
-                    <input id="credentialsSearch" type="search" placeholder="Search credentials..."
-                        aria-label="Search credentials">
-                </label>
-            </div>
-
-            <div id="credentialsGrid" class="credentials-grid"></div>
-        </section>
-
-        <section class="section container" id="projects" aria-labelledby="projects-title">
-            <div class="section-heading">
-                <div>
-                    <span class="section-kicker">03 / SELECTED WORK</span>
-                    <h2 id="projects-title">Projects</h2>
-                    <p>A selection of things I've designed, coded, and built.</p>
-                </div>
-                <div class="section-controls project-controls">
-                    <label class="search">
-                        <span>⌕</span>
-                        <input id="projectsSearch" type="search" placeholder="Search projects..."
-                            aria-label="Search projects">
-                    </label>
+                <div class="project-toolbar">
+                    <label class="search-field"><span>⌕</span><input id="projectsSearch" type="search"
+                            placeholder="Search the builds..." aria-label="Search projects"></label>
                     <select id="projectSort" aria-label="Sort projects">
-                        <option value="newest">Newest</option>
-                        <option value="oldest">Oldest</option>
-                        <option value="name">Name</option>
+                        <option value="roadmap">Roadmap order</option>
+                        <option value="name">Name A–Z</option>
                     </select>
                 </div>
+                <div class="filter-pills" id="projectFilters" aria-label="Filter projects"></div>
+                <div class="projects-grid" id="projectGrid"></div>
+                <p class="section-footnote"><span class="status-dot"></span> Project status is updated as each build
+                    progresses. Upcoming projects are roadmap entries, not completed work.</p>
             </div>
-
-            <div id="projectFilters" class="filter-pills" aria-label="Project categories"></div>
-            <div id="projectGrid" class="projects-grid"></div>
         </section>
 
-        
-
-
-        <section class="section container" id="contact" aria-labelledby="contact-title">
-            <div class="contact-card">
-                <div class="contact-copy">
-                    <span class="section-kicker">05 / CONTACT</span>
-                    <h2 id="contact-title">Let's build something.</h2>
-                    <p>
-                        Have an idea, project, opportunity, or just want to connect?
-                        Send a message and I'll get back to you.
-                    </p>
-                    <div class="contact-note">Available for projects, collaborations & opportunities.</div>
+        <section class="section container" id="skills">
+            <div class="section-heading">
+                <div><span class="section-kicker">02 / ENGINEERING TOOLKIT</span>
+                    <h2>Tools of the trade.</h2>
+                    <p>Languages, frameworks, and technologies I work with and continue to develop.</p>
                 </div>
+                <label class="search-field compact-search"><span>⌕</span><input id="skillsSearch" type="search"
+                        placeholder="Find a technology..." aria-label="Search skills"></label>
+            </div>
+            <div class="skills-grid" id="skillsGrid"></div>
+        </section>
 
-                <form id="contactForm" class="contact-form">
-                    <div class="form-row">
-                        <label>
-                            First Name
-                            <input name="firstName" type="text" placeholder="John" required>
-                        </label>
-                        <label>
-                            Last Name
-                            <input name="lastName" type="text" placeholder="Doe" required>
-                        </label>
+        <section class="section container" id="credentials">
+            <div class="section-heading">
+                <div><span class="section-kicker">03 / MILESTONES</span>
+                    <h2>Credentials & recognition.</h2>
+                    <p>Certifications, courses, programs, and achievements.</p>
+                </div>
+            </div>
+            <div class="credentials-grid" id="credentialsGrid"></div>
+        </section>
+
+        <section class="section journal-section" id="journal">
+            <div class="container">
+                <div class="section-heading">
+                    <div><span class="section-kicker">04 / NOTES FROM THE WORKBENCH</span>
+                        <h2>Engineering journal.</h2>
+                        <p>Technical articles, build logs, and the thinking behind the code.</p>
+                    </div><a class="text-link" href="blog/index.html">All articles ↗</a>
+                </div>
+                <div class="journal-grid" id="blogGrid"></div>
+                <div class="social-strip">
+                    <div class="social-copy"><span class="section-kicker">BUILDING IN PUBLIC</span>
+                        <h3>Follow the process.</h3>
+                        <p>Project updates, technical breakdowns, experiments, and lessons from the marathon.</p><a
+                            class="button button-secondary" id="instagramProfile"
+                            href="https://www.instagram.com/cr3o.engineering/" target="_blank" rel="noopener">Instagram
+                            profile ↗</a>
                     </div>
+                    <div class="instagram-grid" id="instagramGrid"></div>
+                </div>
+            </div>
+        </section>
 
-                    <label>
-                        Reason
-                        <select name="reason">
+        <section class="section container" id="contact">
+            <div class="contact-card">
+                <div class="contact-copy"><span class="section-kicker">05 / OPEN CHANNEL</span>
+                    <h2>Have something<br><span>in mind?</span></h2>
+                    <p>Have an idea, opportunity, collaboration, or feedback? I'd be glad to hear from you.</p>
+                    <div class="contact-links"><a href="https://github.com/jakey-techss" target="_blank"
+                            rel="noopener">GitHub ↗</a><a href="https://www.instagram.com/cr3o.engineering/"
+                            target="_blank" rel="noopener">Instagram ↗</a></div>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row"><label>First name<input name="firstName" type="text" placeholder="Jane"
+                                required></label><label>Last name<input name="lastName" type="text" placeholder="Doe"
+                                required></label></div>
+                    <label>Email address<input name="email" type="email" placeholder="jane@example.com"
+                            required></label>
+                    <label>What's this about?<select name="reason">
                             <option>Project inquiry</option>
-                            <option>Job offer</option>
+                            <option>Opportunity</option>
                             <option>Collaboration</option>
                             <option>Feedback</option>
                             <option>Other</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        Message
-                        <textarea name="message" placeholder="Tell me about your idea..." required></textarea>
-                    </label>
-
-                    <button class="button button-primary submit-button" type="submit">
-                        Send Message <span>↗</span>
-                    </button>
-                    <p id="formStatus" class="form-status" role="status"></p>
+                        </select></label>
+                    <label>Message<textarea name="message" placeholder="Tell me a little about it..."
+                            required></textarea></label>
+                    <button class="button button-primary" type="submit">Prepare message <span>↗</span></button>
+                    <p class="form-status" id="formStatus" role="status">This opens your email app to send the message.
+                    </p>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer container">
-        <span>© <span id="year"></span> Joshua C. Fineboy-Mark</span>
-    </footer>
+    <footer class="footer container"><a class="brand" href="#home"><span class="brand-mark">JF</span><span
+                class="brand-name">CODE IS LIFE</span></a><span>© <span id="year"></span> · Designed
+            around the work.</span><a href="#home">Back to top ↑</a></footer>
 
+    <dialog class="project-dialog" id="projectDialog">
+        <button class="dialog-close" id="dialogClose" aria-label="Close project details">×</button>
+        <div id="projectDialogContent"></div>
+    </dialog>
     <script src="pages/home/home.js"></script>
 </body>
 

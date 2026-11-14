@@ -1,535 +1,424 @@
+const projects = [
+  {
+    id: "BUILD_001",
+    name: "QueueUp",
+    month: "Month 01",
+    week: "Week 01",
+    category: "React + Vite",
+    status: "planned",
+    description: "A product-focused queue management application.",
+    stack: ["React", "Vite", "JavaScript"],
+    problem: "Describe the user problem this project is intended to solve.",
+    features: [
+      "Add the core user workflow",
+      "Document the architecture",
+      "Test and deploy the MVP"
+    ],
+    learning: "Record the engineering concepts and decisions you learn during this build.",
+    demo: "#",
+    github: "#",
+    docs: "#"
+  },
+  {
+    id: "BUILD_002",
+    name: "Trackly",
+    month: "Month 01",
+    week: "Week 02",
+    category: "React + Vite",
+    status: "upcoming",
+    description: "A tracking product from the 24-month engineering roadmap.",
+    stack: ["React", "Vite"],
+    problem: "Add the problem statement after planning.",
+    features: ["Define the MVP", "Implement the main workflow", "Test with users"],
+    learning: "Add lessons after completing the build."
+  },
+  {
+    id: "BUILD_003",
+    name: "FeedbackFlow",
+    month: "Month 01",
+    week: "Week 03",
+    category: "React + Vite",
+    status: "upcoming",
+    description: "A feedback collection and organization product.",
+    stack: ["React", "Vite"],
+    problem: "Add the problem statement after planning.",
+    features: ["Create a feedback flow", "Organize submissions", "Review and iterate"],
+    learning: "Add lessons after completing the build."
+  },
+  {
+    id: "BUILD_004",
+    name: "FormForge",
+    month: "Month 01",
+    week: "Week 04",
+    category: "React + Vite",
+    status: "upcoming",
+    description: "A form-building product focused on a clear creation and response workflow.",
+    stack: ["React", "Vite"],
+    problem: "Add the problem statement after planning.",
+    features: ["Build a form editor", "Collect responses", "Validate the experience"],
+    learning: "Add lessons after completing the build."
+  }
 
-const skillsData = [
-    {
-        id: "html",
-        title: "HTML",
-        image: "assets/html (1).png",
-        experience: 6,
-        category: "Web Development"
-    },
-    {
-        id: "css",
-        title: "CSS",
-        image: "assets/css.png",
-        experience: 6,
-        category: "Web Development"
-    },
-    {
-        id: "javascript",
-        title: "JavaScript",
-        image: "assets/javascript.png",
-        experience: 3,
-        category: "Web Development"
-    },
-    {
-        id: "python",
-        title: "Python",
-        image: "assets/python.png",
-        experience: 3,
-        category: "Machine Learning & AI"
-    },
-    {
-        id: "firebase",
-        title: "Firebase",
-        image: "assets/firebase.png",
-        experience: 2,
-        category: "Web Development"
-    },
-    {
-        id: "supabase",
-        title: "Supabase",
-        image: "assets/supabase.png",
-        experience: 1,
-        category: "Web Development"
-    },
-    {
-        id: "java",
-        title: "Java",
-        image: "assets/java (1).png",
-        experience: 1,
-        category: "Software Development"
-    },
-    {
-        id: "react",
-        title: "React",
-        image: "assets/react.png",
-        experience: 1,
-        category: "Web Development"
-    },
-    {
-        id: "kotlin",
-        title: "Kotlin",
-        image: "assets/kotlin.png",
-        experience: 1,
-        category: "Software Development"
-    },
-    {
-        id: "swift",
-        title: "SwiftUI",
-        image: "assets/swift.png",
-        experience: 2,
-        category: "Software Development"
-    },
-    {
-        id: "redis",
-        title: "RedisDB",
-        image: "assets/redis.png",
-        experience: 1,
-        category: "Software Development"
-    },
-    {
-        id: "flutter",
-        title: "Flutter",
-        image: "assets/flutter.png",
-        experience: 1,
-        category: "Software Development"
-    },
-    {
-        id: "sql",
-        title: "SQL",
-        image: "assets/sql.png",
-        experience: 2,
-        category: "Software Development"
-    },
-    {
-        id: "api",
-        title: "API Development",
-        image: "assets/api.png",
-        experience: 1,
-        category: "Web Development"
-    },
-    {
-        id: "wix",
-        title: "Wix",
-        image: "assets/wix.png",
-        experience: 5,
-        category: "Web Development"
-    },
-    {
-        id: "raspberry-pi",
-        title: "Raspberry Pi",
-        image: "assets/raspberry.png",
-        experience: 2,
-        category: "Hardware & Other"
-    },
-    {
-        id: "git",
-        title: "Git",
-        image: "assets/git.png",
-        experience: 2,
-        category: "Software Development"
-    },
-    {
-        id: "github",
-        title: "GitHub",
-        image: "assets/github.png",
-        experience: 2,
-        category: "Software Development"
-    },
-    {
-        id: "arduino",
-        title: "Arduino",
-        image: "assets/arduino.png",
-        experience: 2,
-        category: "Hardware & Other"
-    },
-    {
-        id: "figma",
-        title: "Figma",
-        image: "assets/figma.png",
-        experience: 2,
-        category: "UI / UX"
-    },
-    {
-        id: "canva",
-        title: "Canva",
-        image: "assets/canva.png",
-        experience: 4,
-        category: "UI / UX"
-    },
-    {
-        id: "3d",
-        title: "3D Printing & Modeling",
-        image: "assets/fusion.png",
-        experience: 1,
-        category: "Hardware & Other"
-    }
 ];
 
-const projectsData = [
-    {
-        id: "stellar-ed",
-        title: "Stellar Ed",
-        description: "A student platform for tracking homework, deadlines, and study progress.",
-        image: "https://github.com/jakey-techss/StellarEd/blob/main/assets/Stellar-removebg-preview.png?raw=true",
-        tags: ["Education", "Web", "AI"],
-        tools: ["html", "css", "javascript", "firebase", "figma", "api", "github", "git"],
-        categories: ["Web Development", "Project Demo"],
-        dateCreated: new Date(2025, 10, 30),
-        url: "https://stellar-ed.vercel.app"
-    },
-    {
-        id: "inventa-software",
-        title: "Inventa",
-        description: "Modular robotics platform with custom hardware and visual node-based programming.",
-        image: "assets/Thumbnail.png",
-        tags: ["Education", "Web", "AI"],
-        tools: ["html", "css", "javascript", "api", "github", "git", "arduino", "3d"],
-        categories: ["Web Development", "Project Demo","Hardware"],
-        dateCreated: new Date(2026, 8, 9),
-        url: "https://inventa-phys-s-12.vercel.app"
-    },
-    {
-        id: "astryx",
-        title: "Astryx",
-        description: "A career app that recommends careers and guides users toward achieving them.",
-        image: "assets/App_Icon-removebg-preview.png",
-        tags: ["Career", "AI", "Software"],
-        tools: ["java", "redis", "api", "canva", "figma"],
-        categories: ["Software Development", "Machine Learning & AI"],
-        dateCreated: new Date(2026, 4, 1),
-        url: "https://youtube.com/shorts/nOVElGq8c-w?feature=share"
-    },
-    {
-        id: "z-arena",
-        title: "Z-Arena",
-        description: "An anime card game where strategy and luck decide victory.",
-        image: "assets/z-arena.png",
-        tags: ["Game", "Strategy", "Anime"],
-        tools: ["java", "html", "css", "javascript", "figma", "git", "github"],
-        categories: ["Game Development", "Project Demo"],
-        dateCreated: new Date(2026, 4, 1),
-        url: "https://github.com/jakey-techss/Z-Arena"
-    },
-    {
-        id: "gravity-x",
-        title: "Gravity X",
-        description: "A physics web game designed to support teachers teaching topics relating to gravity.",
-        image: "assets/GravityX.png",
-        tags: ["Physics", "Education", "Web"],
-        tools: ["html", "css", "javascript", "figma", "git", "github"],
-        categories: ["Web Development", "Game Development", "Project Demo"],
-        dateCreated: new Date(2026, 4, 1),
-        url: "https://gravity-x-one.vercel.app"
-    },
-    {
-        id: "hoopz-to-greatness",
-        title: "Hoopz To Greatness",
-        description: "An initiative that uses education to help youth achieve a brighter future.",
-        image: "assets/HTG.png",
-        tags: ["Education", "Community", "Web"],
-        tools: ["html", "css", "figma", "git", "github"],
-        categories: ["Web Development", "Project Demo"],
-        dateCreated: new Date(2026, 4, 1),
-         url: "https://hoopztogreatness.com"
-    }
+
+const skills = [
+  { group: "Languages & foundations", name: "JavaScript", meta: "Frontend and application logic", symbol: "JS" },
+  { group: "Languages & foundations", name: "Java", meta: "Object-oriented programming", symbol: "JV" },
+  { group: "Languages & foundations", name: "Python", meta: "Scripting and application development", symbol: "PY" },
+  { group: "Languages & foundations", name: "C / C++", meta: "Systems and lower-level programming", symbol: "C+" },
+  { group: "Web & application development", name: "HTML & CSS", meta: "Semantic interfaces and styling", symbol: "<>" },
+  { group: "Web & application development", name: "React", meta: "Component-based user interfaces", symbol: "RE" },
+  { group: "Web & application development", name: "Spring Boot", meta: "Java backend development", symbol: "SB" },
+  { group: "Web & application development", name: "Node.js", meta: "JavaScript runtime and APIs", symbol: "ND" },
+  { group: "Data & infrastructure", name: "SQL", meta: "Relational data and queries", symbol: "DB" },
+  { group: "Data & infrastructure", name: "Supabase", meta: "Database, authentication, and storage", symbol: "SB" },
+  { group: "Data & infrastructure", name: "Git & GitHub", meta: "Version control and collaboration", symbol: "GH" }
 ];
 
-const credentialsData = [
-    {
-        id: "mit-data-science",
-        title: "MIT Data Science & Machine Learning Course",
-        type: "Certification",
-        image: "assets/AICRED.png",
-        date: "2025"
-    },
-    {
-        id: "rowan-entrepreneur",
-        title: "Rowan University Think Like An Entrepreneur Graduate",
-        type: "Award / Program",
-        image: "assets/Business.png",
-        date: "2025"
-    }
+const credentials = [
+  { type: "Certification", title: "Certiport CAD Certification", date: "Add year / issuing organization" },
+  { type: "Coursework", title: "College-level CAD course", date: "12th grade" },
+  { type: "Academic", title: "AP Computer Science", date: "Score: 5" },
+  { type: "Academic", title: "AP Physics", date: "Score: 5" },
+  { type: "Academic", title: "AP Precalculus", date: "Score: 5" }
 ];
 
-const logsData = [
-    {
-        id: "ai-lab-progress",
-        project: "AI//LAB",
-        description: "Building the AI//LAB learning platform and refining its curriculum, gamification, projects, and interactive learning experience.",
-        date: new Date(2026, 8, 4),
-        icon: "assets/ai-lab-icon.png",
-        url: "logs/ai-lab.html"
-    },
-    {
-        id: "game-development",
-        project: "Asteria",
-        description: "Exploring the core gameplay systems, puzzle mechanics, multiplayer structure, and visual direction for the space-based RPG.",
-        date: new Date(2026, 7, 25),
-        icon: "assets/asteria-icon.png",
-        url: "logs/asteria.html"
-    },
-    {
-        id: "inventa-progress",
-        project: "Inventa",
-        description: "Continuing development of the robotics platform, including the interface, hardware integration, and visual programming experience.",
-        date: new Date(2026, 7, 20),
-        icon: "assets/inventa-icon.png",
-        url: "logs/inventa.html"
-    }
+const articles = [
+  {
+    type: "ENGINEERING NOTES",
+    title: "The engineering plan behind the marathon",
+    description: "How I am structuring 24 months of weekly product builds, technical learning, and public documentation.",
+    date: "Coming soon",
+    url: "journal.html"
+  },
+  {
+    type: "BUILD LOG",
+    title: "From requirements to a working product",
+    description: "A place for implementation notes, architecture decisions, debugging, testing, and release reflections.",
+    date: "Coming soon",
+    url: "journal.html"
+  },
+  {
+    type: "TECHNICAL DEEP DIVE",
+    title: "What I learned building with React and Supabase",
+    description: "A technical write-up space for real implementation details and lessons from future projects.",
+    date: "Coming soon",
+    url: "journal.html"
+  }
 ];
 
-function renderLogs() {
-    const container = $("#logsGrid");
+const instagramPosts = [
+  { label: "THE CHALLENGE", title: "96 Builds. 24 Months.", url: "https://www.instagram.com/" },
+  { label: "BUILD LOG", title: "Planning the first product", url: "https://www.instagram.com/" },
+  { label: "UNDER THE HOOD", title: "Engineering decisions", url: "https://www.instagram.com/" }
+];
 
-    const sortedLogs = [...logsData]
-        .sort((a, b) => b.date - a.date);
+const projectGrid = document.querySelector("#projectGrid");
+const projectFilters = document.querySelector("#projectFilters");
+const projectsSearch = document.querySelector("#projectsSearch");
+const projectSort = document.querySelector("#projectSort");
 
-    container.innerHTML = sortedLogs.length
-        ? sortedLogs.map(log => `
-            <article class="log-card">
-                <div class="log-icon">
-                    <img
-                        src="${escapeHTML(log.icon)}"
-                        alt=""
-                        loading="lazy"
-                    >
-                </div>
+let activeCategory = "All";
 
-                <div class="log-content">
-                    <div class="log-top">
-                        <span class="log-date">${formatDate(log.date)}</span>
-                    </div>
-
-                    <h3 class="log-title">${escapeHTML(log.project)}</h3>
-
-                    <p class="log-description">
-                        ${escapeHTML(log.description)}
-                    </p>
-
-                    <a
-                        class="log-link"
-                        href="${escapeHTML(log.url)}"
-                    >
-                        Read Log <span>↗</span>
-                    </a>
-                </div>
-            </article>
-        `).join("")
-        : `<div class="empty-state">No recent logs.</div>`;
+function escapeHTML(value = "") {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  }[char]));
 }
 
+function renderFilters() {
+  const categories = ["All", ...new Set(projects.map(project => project.category))];
 
-const $ = (selector) => document.querySelector(selector);
-
-const state = {
-    skillSearch: "",
-    credentialSearch: "",
-    projectSearch: "",
-    projectCategory: "All",
-    projectSort: "newest"
-};
-
-function escapeHTML(value) {
-    return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-}
-
-function formatDate(date) {
-    return new Intl.DateTimeFormat("en-US", {
-        month: "short",
-        year: "numeric"
-    }).format(date);
-}
-
-function getProjectCount(skillId) {
-    return projectsData.filter(project => project.tools.includes(skillId)).length;
-}
-
-function renderSkills() {
-    const container = $("#skillsGrid");
-    const query = state.skillSearch.trim().toLowerCase();
-
-    const filtered = skillsData.filter(skill =>
-        `${skill.title} ${skill.category}`.toLowerCase().includes(query)
-    );
-
-    if (!filtered.length) {
-        container.innerHTML = `<div class="empty-state">No skills found.</div>`;
-        return;
-    }
-
-    const categories = [...new Set(skillsData.map(skill => skill.category))];
-
-    container.innerHTML = categories
-        .map(category => {
-            const skills = filtered.filter(skill => skill.category === category);
-
-            if (!skills.length) return "";
-
-            return `
-                <div class="skill-group">
-                    <div class="skill-group-title">${escapeHTML(category)}</div>
-                    <div class="skills-grid">
-                        ${skills.map(skill => `
-                            <article class="skill-card">
-                                <div class="skill-icon">
-                                    <img src="${escapeHTML(skill.image)}" alt="" loading="lazy">
-                                </div>
-                                <div>
-                                    <h3 class="skill-name">${escapeHTML(skill.title)}</h3>
-                                    <p class="skill-meta">${skill.experience} ${skill.experience === 1 ? "year" : "years"} experience</p>
-                                    <p class="skill-projects">${getProjectCount(skill.id)} ${getProjectCount(skill.id) === 1 ? "project" : "projects"}</p>
-                                </div>
-                            </article>
-                        `).join("")}
-                    </div>
-                </div>
-            `;
-        })
-        .join("");
-}
-
-function renderCredentials() {
-    const container = $("#credentialsGrid");
-    const query = state.credentialSearch.trim().toLowerCase();
-
-    const filtered = credentialsData.filter(item =>
-        `${item.title} ${item.type} ${item.date}`.toLowerCase().includes(query)
-    );
-
-    container.innerHTML = filtered.length
-        ? filtered.map(item => `
-            <article class="credential-card">
-                <div class="credential-image">
-                    <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.title)}" loading="lazy">
-                </div>
-                <div class="credential-content">
-                    <div class="credential-type">${escapeHTML(item.type)}</div>
-                    <h3 class="credential-title">${escapeHTML(item.title)}</h3>
-                    <p class="credential-date">${escapeHTML(item.date)}</p>
-                </div>
-            </article>
-        `).join("")
-        : `<div class="empty-state">No credentials found.</div>`;
-}
-
-function renderProjectFilters() {
-    const categories = [
-        "All",
-        ...new Set(projectsData.flatMap(project => project.categories))
-    ];
-
-    $("#projectFilters").innerHTML = categories.map(category => `
-        <button
-            class="filter-pill ${state.projectCategory === category ? "active" : ""}"
-            type="button"
-            data-category="${escapeHTML(category)}"
-        >
-            ${escapeHTML(category)}
-        </button>
-    `).join("");
+  projectFilters.innerHTML = categories.map(category =>
+    `<button class="filter-pill ${category === activeCategory ? "active" : ""}"
+      type="button"
+      data-category="${escapeHTML(category)}">
+      ${escapeHTML(category)}
+    </button>`
+  ).join("");
 }
 
 function renderProjects() {
-    const container = $("#projectGrid");
-    const query = state.projectSearch.trim().toLowerCase();
+  let visible = projects.filter(project => {
+    const search = projectsSearch.value.trim().toLowerCase();
 
-    let filtered = projectsData.filter(project => {
-        const matchesSearch =
-            `${project.title} ${project.description} ${project.tags.join(" ")} ${project.categories.join(" ")}`
-                .toLowerCase()
-                .includes(query);
+    const matchesSearch = [
+      project.name,
+      project.description,
+      project.category,
+      project.id,
+      ...(project.stack || [])
+    ].join(" ").toLowerCase().includes(search);
 
-        const matchesCategory =
-            state.projectCategory === "All" ||
-            project.categories.includes(state.projectCategory);
+    return matchesSearch &&
+      (activeCategory === "All" || project.category === activeCategory);
+  });
 
-        return matchesSearch && matchesCategory;
-    });
+  if (projectSort.value === "name") {
+    visible.sort((a, b) => a.name.localeCompare(b.name));
+  } else {
+    visible.sort((a, b) => projects.indexOf(a) - projects.indexOf(b));
+  }
 
-    filtered.sort((a, b) => {
-        if (state.projectSort === "name") {
-            return a.title.localeCompare(b.title);
-        }
+  projectGrid.innerHTML = visible.length
+    ? visible.map(project => `
+      <article class="project-card"
+        tabindex="0"
+        role="button"
+        data-project="${escapeHTML(project.id)}"
+        aria-label="Open ${escapeHTML(project.name)} details">
 
-        const difference = a.dateCreated - b.dateCreated;
-        return state.projectSort === "oldest" ? difference : -difference;
-    });
+        <div class="project-card-top">
+          <span class="project-id">${escapeHTML(project.id)} · ${escapeHTML(project.month)}</span>
+          <span class="project-status">
+            ${escapeHTML(
+              project.status === "planned"
+                ? "● PLANNED"
+                : project.status === "in-progress"
+                  ? "● IN PROGRESS"
+                  : "○ UPCOMING"
+            )}
+          </span>
+        </div>
 
-    container.innerHTML = filtered.length
-        ? filtered.map(project => `
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="${escapeHTML(project.image)}" alt="${escapeHTML(project.title)}" loading="lazy">
-                </div>
+        <h3 class="project-title">${escapeHTML(project.name)}</h3>
+        <p class="project-description">${escapeHTML(project.description)}</p>
 
-                <div class="project-content">
-                    <div class="project-date">${formatDate(project.dateCreated)}</div>
-                    <h3 class="project-title">${escapeHTML(project.title)}</h3>
-                    <p class="project-description">${escapeHTML(project.description)}</p>
+        <div class="project-tags">
+          ${(project.stack || []).map(tag =>
+            `<span class="tag">${escapeHTML(tag)}</span>`
+          ).join("")}
+        </div>
 
-                    <div class="project-tags">
-                        ${project.tags.map(tag => `
-                            <span class="tag">${escapeHTML(tag)}</span>
-                        `).join("")}
-                    </div>
-
-                    ${project.url ? `
-                        <a class="project-link" href="${escapeHTML(project.url)}" target="_blank" rel="noopener">
-                            View Project ↗
-                        </a>
-                    ` : ""}
-                </div>
-            </article>
-        `).join("")
-        : `<div class="empty-state">No projects found.</div>`;
+        <span class="project-open">OPEN RECORD ↗</span>
+      </article>
+    `).join("")
+    : `<div class="empty-state">No builds match that search. Try another term or category.</div>`;
 }
 
+function openProject(projectId) {
+  const project = projects.find(item => item.id === projectId);
+  if (!project) return;
 
-$("#skillsSearch").addEventListener("input", event => {
-    state.skillSearch = event.target.value;
-    renderSkills();
+  const content = document.querySelector("#projectDialogContent");
+
+  const links = [
+    ["Live demo", project.demo],
+    ["GitHub repository", project.github],
+    ["Documentation PDF", project.docs]
+  ].filter(([, url]) => url && url !== "#");
+
+  content.innerHTML = `
+    <span class="dialog-kicker">
+      ${escapeHTML(project.id)} / ${escapeHTML(project.month)} · ${escapeHTML(project.week || "")}
+    </span>
+
+    <h2 class="dialog-title">${escapeHTML(project.name)}</h2>
+
+    <p class="dialog-description">${escapeHTML(project.description)}</p>
+
+    <div class="dialog-block">
+      <h4>Build status</h4>
+      <p>${escapeHTML(project.status || "Not specified")} · ${escapeHTML(project.category)}</p>
+    </div>
+
+    <div class="dialog-block">
+      <h4>Problem being explored</h4>
+      <p>${escapeHTML(project.problem || "Add the problem statement to this project record.")}</p>
+    </div>
+
+    <div class="dialog-block">
+      <h4>Planned / implemented features</h4>
+      <ul>
+        ${(project.features || []).map(feature => `<li>${escapeHTML(feature)}</li>`).join("")}
+      </ul>
+    </div>
+
+    <div class="dialog-block">
+      <h4>Engineering notes</h4>
+      <p>${escapeHTML(project.learning || "Document architecture, implementation decisions, debugging, testing, and lessons learned here.")}</p>
+    </div>
+
+    <div class="dialog-block">
+      <h4>Technology</h4>
+      <p>${(project.stack || []).map(escapeHTML).join(" · ")}</p>
+    </div>
+
+    ${links.length ? `
+      <div class="dialog-block">
+        <h4>Project resources</h4>
+        <p>
+          ${links.map(([label, url]) =>
+            `<a class="text-link" href="${escapeHTML(url)}" target="_blank" rel="noopener">${escapeHTML(label)} ↗</a>`
+          ).join(" &nbsp;·&nbsp; ")}
+        </p>
+      </div>
+    ` : ""}
+  `;
+
+  document.querySelector("#projectDialog").showModal();
+}
+
+// Project filters
+projectFilters.addEventListener("click", event => {
+  const button = event.target.closest("[data-category]");
+  if (!button) return;
+
+  activeCategory = button.dataset.category;
+  renderFilters();
+  renderProjects();
 });
 
-$("#credentialsSearch").addEventListener("input", event => {
-    state.credentialSearch = event.target.value;
-    renderCredentials();
+// Project search and sorting
+projectsSearch.addEventListener("input", renderProjects);
+projectSort.addEventListener("change", renderProjects);
+
+// Project cards
+projectGrid.addEventListener("click", event => {
+  const card = event.target.closest("[data-project]");
+  if (card) openProject(card.dataset.project);
 });
 
-$("#projectsSearch").addEventListener("input", event => {
-    state.projectSearch = event.target.value;
-    renderProjects();
-});
-
-$("#projectSort").addEventListener("change", event => {
-    state.projectSort = event.target.value;
-    renderProjects();
-});
-
-$("#projectFilters").addEventListener("click", event => {
-    const button = event.target.closest("[data-category]");
-    if (!button) return;
-
-    state.projectCategory = button.dataset.category;
-    renderProjectFilters();
-    renderProjects();
-});
-
-$("#contactForm").addEventListener("submit", event => {
+projectGrid.addEventListener("keydown", event => {
+  if (
+    (event.key === "Enter" || event.key === " ") &&
+    event.target.matches("[data-project]")
+  ) {
     event.preventDefault();
-
-    const status = $("#formStatus");
-    status.textContent = "Thanks! Your message form is ready to connect to your email/backend service.";
-
-    event.target.reset();
+    openProject(event.target.dataset.project);
+  }
 });
 
-document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-        document.querySelectorAll(".nav-link").forEach(item => item.classList.remove("active"));
-        link.classList.add("active");
-    });
+// Project dialog
+document.querySelector("#dialogClose").addEventListener("click", () => {
+  document.querySelector("#projectDialog").close();
 });
 
-$("#year").textContent = new Date().getFullYear();
+document.querySelector("#projectDialog").addEventListener("click", event => {
+  if (event.target === event.currentTarget) {
+    event.currentTarget.close();
+  }
+});
 
-renderSkills();
-renderCredentials();
-renderProjectFilters();
+// Skills
+function renderSkills(query = "") {
+  const filtered = skills.filter(skill =>
+    `${skill.group} ${skill.name} ${skill.meta}`
+      .toLowerCase()
+      .includes(query.toLowerCase())
+  );
+
+  const groups = [...new Set(filtered.map(skill => skill.group))];
+
+  document.querySelector("#skillsGrid").innerHTML = filtered.length
+    ? groups.map(group => `
+        <h3 class="skill-group">${escapeHTML(group)}</h3>
+
+        ${filtered.filter(skill => skill.group === group).map(skill => `
+          <article class="skill-card">
+            <span class="skill-symbol">${escapeHTML(skill.symbol)}</span>
+            <div>
+              <div class="skill-name">${escapeHTML(skill.name)}</div>
+              <div class="skill-meta">${escapeHTML(skill.meta)}</div>
+            </div>
+          </article>
+        `).join("")}
+      `).join("")
+    : `<div class="empty-state">No matching technologies.</div>`;
+}
+
+document.querySelector("#skillsSearch").addEventListener("input", event => {
+  renderSkills(event.target.value);
+});
+
+// Credentials
+document.querySelector("#credentialsGrid").innerHTML = credentials.map(item => `
+  <article class="credential-card">
+    <span class="credential-type">${escapeHTML(item.type)}</span>
+    <h3 class="credential-title">${escapeHTML(item.title)}</h3>
+    <p class="credential-date">${escapeHTML(item.date)}</p>
+  </article>
+`).join("");
+
+// Blog articles
+document.querySelector("#blogGrid").innerHTML = articles.map(article => `
+  <article class="journal-card">
+    <span class="journal-type">${escapeHTML(article.type)} · ${escapeHTML(article.date)}</span>
+    <h3>${escapeHTML(article.title)}</h3>
+    <p>${escapeHTML(article.description)}</p>
+    <a href="${escapeHTML(article.url)}">READ ARTICLE ↗</a>
+  </article>
+`).join("");
+
+// Instagram posts
+document.querySelector("#instagramGrid").innerHTML = instagramPosts.map(post => `
+  <article class="instagram-card">
+    <span>${escapeHTML(post.label)}</span>
+    <strong>${escapeHTML(post.title)}</strong>
+    <a href="${escapeHTML(post.url)}" target="_blank" rel="noopener">VIEW POST ↗</a>
+  </article>
+`).join("");
+
+document.querySelector("#instagramProfile").href = "https://www.instagram.com/";
+
+// Contact form
+document.querySelector("#contactForm").addEventListener("submit", event => {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const data = new FormData(form);
+
+  const recipient = "YOUR_EMAIL@example.com";
+
+  const subject = encodeURIComponent(
+    `${data.get("reason")} — Portfolio contact`
+  );
+
+  const body = encodeURIComponent(
+    `Name: ${data.get("firstName")} ${data.get("lastName")}\n` +
+    `Email: ${data.get("email")}\n` +
+    `Reason: ${data.get("reason")}\n\n` +
+    `${data.get("message")}`
+  );
+
+  if (recipient === "YOUR_EMAIL@example.com") {
+    document.querySelector("#formStatus").textContent =
+      "Add your email address in home.js to activate the contact form.";
+    return;
+  }
+
+  window.location.href =
+    `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+  document.querySelector("#formStatus").textContent =
+    "Your email app should open with the message prepared.";
+});
+
+// Mobile navigation
+const menuToggle = document.querySelector("#menuToggle");
+const navLinks = document.querySelector("#navLinks");
+
+menuToggle.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(open));
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+// Current year
+document.querySelector("#year").textContent = new Date().getFullYear();
+
+// Initial rendering
+renderFilters();
 renderProjects();
-renderLogs();
+renderSkills();

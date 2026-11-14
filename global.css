@@ -1,0 +1,68 @@
+:root {
+    --bg: #101411;
+    --surface: #151c17;
+    --surface-hover: #1b261e;
+    --green: #20b26b;
+    --green-bright: #35d887;
+    --text: #f4f5f0;
+    --muted: #929e95;
+    --border: rgba(112, 151, 123, 0.2);
+
+    --grid-color: rgba(112, 151, 123, 0.09);
+    --radius: 14px;
+}
+
+/* Consistent page background */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Reusable grid texture */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+        linear-gradient(
+            var(--grid-color) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--grid-color) 1px,
+            transparent 1px
+        );
+
+    background-size: 48px 48px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 90%
+    );
+}
+
+/* Keep page content above the grid */
+nav,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Shared accent treatment */
+a.active,
+.nav-link.active {
+    color: var(--green);
+}
+
+button.primary {
+    background: var(--green);
+    color: #07110b;
+    border: 1px solid var(--green);
+}
