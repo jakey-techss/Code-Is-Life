@@ -1,0 +1,854 @@
+.marathon-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 6%;
+}
+
+.marathon-page section {
+    position: relative;
+}
+
+/* HERO */
+
+.marathon-hero {
+    padding: 65px 0 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.marathon-kicker,
+.marathon-section-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--muted);
+    font: 10px "Space Mono", monospace;
+    letter-spacing: 1px;
+}
+
+.marathon-kicker .status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 12px rgba(32, 178, 107, .6);
+}
+
+.marathon-hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 0 85px;
+}
+
+.marathon-hero h1 {
+    margin: 0;
+    font-size: clamp(3.5rem, 8vw, 7.5rem);
+    line-height: .96;
+    letter-spacing: -6px;
+    font-weight: 800;
+}
+
+.marathon-hero h1 span,
+.marathon-section-heading h2 span,
+.roadmap-heading h2 span,
+.about-grid h2 span,
+.marathon-closing h2 span {
+    color: var(--green);
+}
+
+.marathon-intro {
+    max-width: 590px;
+    margin: 28px 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.marathon-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.marathon-primary-button,
+.marathon-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 13px 17px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.marathon-primary-button {
+    color: #07110b;
+    background: var(--green);
+    border: 1px solid var(--green);
+}
+
+.marathon-primary-button:hover {
+    background: #35d887;
+}
+
+.marathon-secondary-button {
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.marathon-secondary-button:hover {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+/* TERMINAL */
+
+.marathon-terminal {
+    overflow: hidden;
+    background: #0c120e;
+    border: 1px solid rgba(32, 178, 107, .3);
+    border-radius: 9px;
+    box-shadow: 0 20px 65px rgba(0, 0, 0, .2);
+}
+
+.terminal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    color: var(--muted);
+    background: #151d17;
+    border-bottom: 1px solid var(--border);
+    font: 9px "Space Mono", monospace;
+    letter-spacing: 1px;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-dots i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #526456;
+}
+
+.terminal-dots i:first-child {
+    background: #e06d5c;
+}
+
+.terminal-dots i:nth-child(2) {
+    background: #d8b74f;
+}
+
+.terminal-dots i:nth-child(3) {
+    background: var(--green);
+}
+
+.terminal-content {
+    padding: 28px;
+    color: #d7e5da;
+    font: 12px/2.2 "Space Mono", monospace;
+}
+
+.terminal-content p {
+    margin: 0;
+}
+
+.terminal-content p span {
+    color: #b49cff;
+}
+
+.terminal-content b {
+    color: #f2cb78;
+    font-weight: 400;
+}
+
+.terminal-content .terminal-green {
+    color: var(--green);
+}
+
+.terminal-indent {
+    padding-left: 22px;
+}
+
+.terminal-cursor {
+    margin-top: 14px;
+    color: var(--green);
+    animation: cursorBlink 1s steps(2, start) infinite;
+}
+
+@keyframes cursorBlink {
+    to { visibility: hidden; }
+}
+
+/* STATS */
+
+.marathon-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+}
+
+.marathon-stats > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 25px 15px;
+    border-right: 1px solid var(--border);
+}
+
+.marathon-stats > div:first-child {
+    padding-left: 0;
+}
+
+.marathon-stats > div:last-child {
+    border-right: 0;
+}
+
+.marathon-stats strong {
+    color: var(--text);
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.marathon-stats span {
+    color: var(--muted);
+    font: 9px "Space Mono", monospace;
+    letter-spacing: .8px;
+}
+
+/* ABOUT */
+
+.marathon-about {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 70px;
+    padding: 65px 0;
+}
+
+.about-grid h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.about-copy p {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.marathon-principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.marathon-principles > div {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.marathon-principles span {
+    color: var(--green);
+    font: 11px "Space Mono", monospace;
+}
+
+.marathon-principles h3 {
+    margin: 25px 0 10px;
+    font-size: 17px;
+}
+
+.marathon-principles p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ROADMAP */
+
+.marathon-roadmap {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.roadmap-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin: 50px 0 30px;
+}
+
+.roadmap-heading h2,
+.marathon-section-heading h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    letter-spacing: -2px;
+    line-height: 1.05;
+}
+
+.roadmap-heading p,
+.marathon-section-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.roadmap-progress {
+    width: min(280px, 100%);
+}
+
+.roadmap-progress > span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--muted);
+    font: 9px "Space Mono", monospace;
+}
+
+.progress-track {
+    height: 5px;
+    overflow: hidden;
+    background: #263129;
+    border-radius: 10px;
+}
+
+.progress-track div {
+    width: 0%;
+    height: 100%;
+    background: var(--green);
+    transition: width .4s ease;
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.month-card {
+    min-height: 155px;
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: .2s ease;
+}
+
+.month-card.current {
+    border-color: rgba(32, 178, 107, .65);
+    background: rgba(32, 178, 107, .06);
+}
+
+.month-card:hover {
+    border-color: var(--green);
+    transform: translateY(-3px);
+}
+
+.month-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--muted);
+    font: 9px "Space Mono", monospace;
+}
+
+.month-card h3 {
+    margin: 27px 0 10px;
+    font-size: 18px;
+}
+
+.month-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.month-status {
+    color: var(--green);
+}
+
+/* PROJECTS */
+
+.marathon-projects {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.marathon-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin: 50px 0 30px;
+}
+
+.project-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 170px;
+}
+
+.project-filter label {
+    color: var(--muted);
+    font: 9px "Space Mono", monospace;
+}
+
+.project-filter select {
+    padding: 12px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font: 12px "DM Sans", sans-serif;
+}
+
+.marathon-product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.marathon-product-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    transition: .2s ease;
+}
+
+.marathon-product-card:hover {
+    border-color: rgba(32, 178, 107, .6);
+}
+
+.product-number {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: var(--green);
+    background: rgba(32, 178, 107, .08);
+    border: 1px solid rgba(32, 178, 107, .2);
+    border-radius: 5px;
+    font: 11px "Space Mono", monospace;
+}
+
+.product-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.product-info h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.product-info p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 13px;
+}
+
+.product-meta span {
+    color: var(--muted);
+    font: 9px "Space Mono", monospace;
+}
+
+.product-status {
+    color: var(--green) !important;
+}
+
+.product-link {
+    display: inline-block;
+    margin-top: 13px;
+    color: var(--green);
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.product-link:hover {
+    text-decoration: underline;
+}
+
+/* LOGS */
+
+.marathon-logs {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.all-journal-link {
+    color: var(--green);
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.all-journal-link:hover {
+    text-decoration: underline;
+}
+
+.log-summary {
+    display: flex;
+    gap: 45px;
+    margin: 35px 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.log-summary > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.log-summary strong {
+    font-size: 25px;
+}
+
+.log-summary span {
+    color: var(--muted);
+    font: 9px "Space Mono", monospace;
+}
+
+.marathon-log-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.marathon-log-card {
+    display: grid;
+    grid-template-columns: 125px 1fr 25px;
+    gap: 20px;
+    align-items: center;
+    padding: 22px 15px;
+    color: var(--text);
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.marathon-log-card:hover {
+    background: rgba(32, 178, 107, .04);
+}
+
+.log-date {
+    color: var(--muted);
+    font: 10px "Space Mono", monospace;
+}
+
+.log-content small {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--green);
+    font: 9px "Space Mono", monospace;
+}
+
+.log-content h3 {
+    margin: 0 0 7px;
+    font-size: 16px;
+}
+
+.log-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.log-arrow {
+    color: var(--green);
+}
+
+.logs-empty {
+    padding: 45px 20px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 7px;
+}
+
+.logs-empty > span {
+    color: var(--green);
+    font-size: 30px;
+}
+
+.logs-empty h3 {
+    margin: 15px 0 8px;
+}
+
+.logs-empty p {
+    max-width: 450px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.logs-empty a {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--green);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* CLOSING */
+
+.marathon-closing {
+    padding: 110px 0;
+    text-align: center;
+}
+
+.marathon-closing h2 {
+    margin: 15px 0;
+    font-size: clamp(2.7rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    letter-spacing: -4px;
+}
+
+.marathon-closing > p:last-child {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .marathon-hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .marathon-terminal {
+        max-width: 560px;
+    }
+
+    .roadmap-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .marathon-page {
+        padding: 0 5%;
+    }
+
+    .marathon-hero-content {
+        padding: 70px 0;
+    }
+
+    .marathon-hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .marathon-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .marathon-stats > div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .marathon-stats > div:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .marathon-principles {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-heading,
+    .marathon-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .roadmap-progress {
+        width: 100%;
+    }
+
+    .roadmap-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .marathon-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marathon-log-card {
+        grid-template-columns: 1fr 20px;
+        gap: 8px;
+    }
+
+    .log-date {
+        grid-column: 1 / -1;
+    }
+
+    .marathon-closing h2 {
+        letter-spacing: -2px;
+    }
+}
+
+@media (max-width: 400px) {
+    .roadmap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marathon-kicker,
+    .marathon-section-label {
+        font-size: 8px;
+    }
+}
+
+/* BUILD LOG READER */
+
+.marathon-log-card {
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+}
+
+.marathon-log-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, .78);
+    backdrop-filter: blur(8px);
+}
+
+.marathon-log-modal.active {
+    display: flex;
+}
+
+.marathon-log-modal-content {
+    position: relative;
+    width: min(760px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 45px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+#closeMarathonLog {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    width: 35px;
+    height: 35px;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+#closeMarathonLog:hover {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+#marathonLogMeta {
+    margin-bottom: 15px;
+    color: var(--green);
+    font: 10px "Space Mono", monospace;
+}
+
+#marathonLogTitle {
+    margin: 0 0 30px;
+    font-size: clamp(28px, 5vw, 42px);
+    letter-spacing: -1.5px;
+}
+
+#marathonLogBody {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+#marathonLogBody h2,
+#marathonLogBody h3 {
+    margin: 30px 0 12px;
+    color: var(--text);
+}
+
+#marathonLogBody a {
+    color: var(--green);
+}
+
+#marathonLogBody pre {
+    overflow-x: auto;
+    padding: 18px;
+    color: #d7e5da;
+    background: #0c120e;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+#marathonLogBody code {
+    font-family: "Space Mono", monospace;
+}
+
+#marathonLogBody ul {
+    padding-left: 22px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .marathon-log-modal {
+        padding: 12px;
+    }
+
+    .marathon-log-modal-content {
+        padding: 35px 22px;
+    }
+}

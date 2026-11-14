@@ -12,12 +12,13 @@ const projects = [
     features: [
       "Add the core user workflow",
       "Document the architecture",
-      "Test and deploy the MVP"
+      "Test and deploy the MVP",
     ],
-    learning: "Record the engineering concepts and decisions you learn during this build.",
+    learning:
+      "Record the engineering concepts and decisions you learn during this build.",
     demo: "#",
     github: "#",
-    docs: "#"
+    docs: "#",
   },
   {
     id: "BUILD_002",
@@ -29,8 +30,12 @@ const projects = [
     description: "A tracking product from the 24-month engineering roadmap.",
     stack: ["React", "Vite"],
     problem: "Add the problem statement after planning.",
-    features: ["Define the MVP", "Implement the main workflow", "Test with users"],
-    learning: "Add lessons after completing the build."
+    features: [
+      "Define the MVP",
+      "Implement the main workflow",
+      "Test with users",
+    ],
+    learning: "Add lessons after completing the build.",
   },
   {
     id: "BUILD_003",
@@ -42,8 +47,12 @@ const projects = [
     description: "A feedback collection and organization product.",
     stack: ["React", "Vite"],
     problem: "Add the problem statement after planning.",
-    features: ["Create a feedback flow", "Organize submissions", "Review and iterate"],
-    learning: "Add lessons after completing the build."
+    features: [
+      "Create a feedback flow",
+      "Organize submissions",
+      "Review and iterate",
+    ],
+    learning: "Add lessons after completing the build.",
   },
   {
     id: "BUILD_004",
@@ -52,66 +61,158 @@ const projects = [
     week: "Week 04",
     category: "React + Vite",
     status: "upcoming",
-    description: "A form-building product focused on a clear creation and response workflow.",
+    description:
+      "A form-building product focused on a clear creation and response workflow.",
     stack: ["React", "Vite"],
     problem: "Add the problem statement after planning.",
-    features: ["Build a form editor", "Collect responses", "Validate the experience"],
-    learning: "Add lessons after completing the build."
-  }
-
+    features: [
+      "Build a form editor",
+      "Collect responses",
+      "Validate the experience",
+    ],
+    learning: "Add lessons after completing the build.",
+  },
 ];
 
-
 const skills = [
-  { group: "Languages & foundations", name: "JavaScript", meta: "Frontend and application logic", symbol: "JS" },
-  { group: "Languages & foundations", name: "Java", meta: "Object-oriented programming", symbol: "JV" },
-  { group: "Languages & foundations", name: "Python", meta: "Scripting and application development", symbol: "PY" },
-  { group: "Languages & foundations", name: "C / C++", meta: "Systems and lower-level programming", symbol: "C+" },
-  { group: "Web & application development", name: "HTML & CSS", meta: "Semantic interfaces and styling", symbol: "<>" },
-  { group: "Web & application development", name: "React", meta: "Component-based user interfaces", symbol: "RE" },
-  { group: "Web & application development", name: "Spring Boot", meta: "Java backend development", symbol: "SB" },
-  { group: "Web & application development", name: "Node.js", meta: "JavaScript runtime and APIs", symbol: "ND" },
-  { group: "Data & infrastructure", name: "SQL", meta: "Relational data and queries", symbol: "DB" },
-  { group: "Data & infrastructure", name: "Supabase", meta: "Database, authentication, and storage", symbol: "SB" },
-  { group: "Data & infrastructure", name: "Git & GitHub", meta: "Version control and collaboration", symbol: "GH" }
+  {
+    group: "Languages & foundations",
+    name: "JavaScript",
+    meta: "Frontend and application logic",
+    symbol: "JS",
+  },
+  {
+    group: "Languages & foundations",
+    name: "Java",
+    meta: "Object-oriented programming",
+    symbol: "JV",
+  },
+  {
+    group: "Languages & foundations",
+    name: "Python",
+    meta: "Scripting and application development",
+    symbol: "PY",
+  },
+  {
+    group: "Languages & foundations",
+    name: "C / C++",
+    meta: "Systems and lower-level programming",
+    symbol: "C+",
+  },
+  {
+    group: "Web & application development",
+    name: "HTML & CSS",
+    meta: "Semantic interfaces and styling",
+    symbol: "<>",
+  },
+  {
+    group: "Web & application development",
+    name: "React",
+    meta: "Component-based user interfaces",
+    symbol: "RE",
+  },
+  {
+    group: "Web & application development",
+    name: "Spring Boot",
+    meta: "Java backend development",
+    symbol: "SB",
+  },
+  {
+    group: "Web & application development",
+    name: "Node.js",
+    meta: "JavaScript runtime and APIs",
+    symbol: "ND",
+  },
+  {
+    group: "Data & infrastructure",
+    name: "SQL",
+    meta: "Relational data and queries",
+    symbol: "DB",
+  },
+  {
+    group: "Data & infrastructure",
+    name: "Supabase",
+    meta: "Database, authentication, and storage",
+    symbol: "SB",
+  },
+  {
+    group: "Data & infrastructure",
+    name: "Firebase",
+    meta: "Database, authentication, and storage",
+    symbol: "FB",
+  },
+  {
+    group: "Data & infrastructure",
+    name: "Git & GitHub",
+    meta: "Version control and collaboration",
+    symbol: "GH",
+  },
 ];
 
 const credentials = [
-  { type: "Certification", title: "Certiport CAD Certification", date: "Add year / issuing organization" },
-  { type: "Coursework", title: "College-level CAD course", date: "12th grade" },
-  { type: "Academic", title: "AP Computer Science", date: "Score: 5" },
-  { type: "Academic", title: "AP Physics", date: "Score: 5" },
-  { type: "Academic", title: "AP Precalculus", date: "Score: 5" }
+  {
+    type: "Coursework",
+    title: "Python For Data Science & Machine Learning",
+    date: "Grade: PASS",
+  },
+  {
+    type: "Coursework",
+    title:
+      "Rowan ENT 06110: Interdisciplinary Perspectives on Entrepreneurship",
+    date: "Grade: PASS",
+  },
+  {
+    type: "Coursework",
+    title: "Harvard PHYS S-12: Introduction To Digital Fabrication",
+    date: "Grade: A",
+  },
+  {
+    type: "Coursework",
+    title: "Harvard CSCI S-212: Introduction To Kali Linux & Ethical Hacking",
+    date: "Grade: A",
+  },
+  { type: "Academic", title: "Honors Algebra I", date: "Grade: A+" },
+  { type: "Academic", title: "Honors Algebra II", date: "Grade: A+" },
+  { type: "Academic", title: "Honors Geometry", date: "Grade: A+" },
+  { type: "Academic", title: "Engineering I", date: "Grade: A+" },
+  {
+    type: "Academic",
+    title: "Introduction to Computer Science",
+    date: "Grade: A+",
+  },
+  { type: "Academic", title: "AP Computer Science A", date: "Score: 5" },
+  { type: "Academic", title: "AP Physics I", date: "Score: 5" },
+  { type: "Academic", title: "AP Precalculus", date: "Score: 5" },
 ];
 
 const articles = [
   {
-    type: "ENGINEERING NOTES",
-    title: "The engineering plan behind the marathon",
-    description: "How I am structuring 24 months of weekly product builds, technical learning, and public documentation.",
-    date: "Coming soon",
-    url: "journal.html"
+    type: "INTRODUCTION",
+    title: "The Beginning",
+    description:
+      "The first day of a 24-month commitment to building 96 software products.",
+    date: "11/16/2026",
+    url: "journal.html",
   },
-  {
-    type: "BUILD LOG",
-    title: "From requirements to a working product",
-    description: "A place for implementation notes, architecture decisions, debugging, testing, and release reflections.",
-    date: "Coming soon",
-    url: "journal.html"
-  },
-  {
-    type: "TECHNICAL DEEP DIVE",
-    title: "What I learned building with React and Supabase",
-    description: "A technical write-up space for real implementation details and lessons from future projects.",
-    date: "Coming soon",
-    url: "journal.html"
-  }
+
 ];
 
 const instagramPosts = [
-  { label: "THE CHALLENGE", title: "96 Builds. 24 Months.", url: "https://www.instagram.com/" },
-  { label: "BUILD LOG", title: "Planning the first product", url: "https://www.instagram.com/" },
-  { label: "UNDER THE HOOD", title: "Engineering decisions", url: "https://www.instagram.com/" }
+  {
+    label: "THE CHALLENGE",
+    title: "96 Builds. 24 Months.",
+    url: "https://www.instagram.com/",
+  },
+  {
+    label: "BUILD LOG",
+    title: "Planning the first product",
+    url: "https://www.instagram.com/",
+  },
+  {
+    label: "UNDER THE HOOD",
+    title: "Engineering decisions",
+    url: "https://www.instagram.com/",
+  },
 ];
 
 const projectGrid = document.querySelector("#projectGrid");
@@ -122,29 +223,39 @@ const projectSort = document.querySelector("#projectSort");
 let activeCategory = "All";
 
 function escapeHTML(value = "") {
-  return String(value).replace(/[&<>"']/g, char => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;"
-  }[char]));
+  return String(value).replace(
+    /[&<>"']/g,
+    (char) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      })[char],
+  );
 }
 
 function renderFilters() {
-  const categories = ["All", ...new Set(projects.map(project => project.category))];
+  const categories = [
+    "All",
+    ...new Set(projects.map((project) => project.category)),
+  ];
 
-  projectFilters.innerHTML = categories.map(category =>
-    `<button class="filter-pill ${category === activeCategory ? "active" : ""}"
+  projectFilters.innerHTML = categories
+    .map(
+      (category) =>
+        `<button class="filter-pill ${category === activeCategory ? "active" : ""}"
       type="button"
       data-category="${escapeHTML(category)}">
       ${escapeHTML(category)}
-    </button>`
-  ).join("");
+    </button>`,
+    )
+    .join("");
 }
 
 function renderProjects() {
-  let visible = projects.filter(project => {
+  let visible = projects.filter((project) => {
     const search = projectsSearch.value.trim().toLowerCase();
 
     const matchesSearch = [
@@ -152,11 +263,16 @@ function renderProjects() {
       project.description,
       project.category,
       project.id,
-      ...(project.stack || [])
-    ].join(" ").toLowerCase().includes(search);
+      ...(project.stack || []),
+    ]
+      .join(" ")
+      .toLowerCase()
+      .includes(search);
 
-    return matchesSearch &&
-      (activeCategory === "All" || project.category === activeCategory);
+    return (
+      matchesSearch &&
+      (activeCategory === "All" || project.category === activeCategory)
+    );
   });
 
   if (projectSort.value === "name") {
@@ -166,7 +282,9 @@ function renderProjects() {
   }
 
   projectGrid.innerHTML = visible.length
-    ? visible.map(project => `
+    ? visible
+        .map(
+          (project) => `
       <article class="project-card"
         tabindex="0"
         role="button"
@@ -181,7 +299,7 @@ function renderProjects() {
                 ? "● PLANNED"
                 : project.status === "in-progress"
                   ? "● IN PROGRESS"
-                  : "○ UPCOMING"
+                  : "○ UPCOMING",
             )}
           </span>
         </div>
@@ -190,19 +308,21 @@ function renderProjects() {
         <p class="project-description">${escapeHTML(project.description)}</p>
 
         <div class="project-tags">
-          ${(project.stack || []).map(tag =>
-            `<span class="tag">${escapeHTML(tag)}</span>`
-          ).join("")}
+          ${(project.stack || [])
+            .map((tag) => `<span class="tag">${escapeHTML(tag)}</span>`)
+            .join("")}
         </div>
 
         <span class="project-open">OPEN RECORD ↗</span>
       </article>
-    `).join("")
+    `,
+        )
+        .join("")
     : `<div class="empty-state">No builds match that search. Try another term or category.</div>`;
 }
 
 function openProject(projectId) {
-  const project = projects.find(item => item.id === projectId);
+  const project = projects.find((item) => item.id === projectId);
   if (!project) return;
 
   const content = document.querySelector("#projectDialogContent");
@@ -210,7 +330,7 @@ function openProject(projectId) {
   const links = [
     ["Live demo", project.demo],
     ["GitHub repository", project.github],
-    ["Documentation PDF", project.docs]
+    ["Documentation PDF", project.docs],
   ].filter(([, url]) => url && url !== "#");
 
   content.innerHTML = `
@@ -235,7 +355,7 @@ function openProject(projectId) {
     <div class="dialog-block">
       <h4>Planned / implemented features</h4>
       <ul>
-        ${(project.features || []).map(feature => `<li>${escapeHTML(feature)}</li>`).join("")}
+        ${(project.features || []).map((feature) => `<li>${escapeHTML(feature)}</li>`).join("")}
       </ul>
     </div>
 
@@ -249,23 +369,30 @@ function openProject(projectId) {
       <p>${(project.stack || []).map(escapeHTML).join(" · ")}</p>
     </div>
 
-    ${links.length ? `
+    ${
+      links.length
+        ? `
       <div class="dialog-block">
         <h4>Project resources</h4>
         <p>
-          ${links.map(([label, url]) =>
-            `<a class="text-link" href="${escapeHTML(url)}" target="_blank" rel="noopener">${escapeHTML(label)} ↗</a>`
-          ).join(" &nbsp;·&nbsp; ")}
+          ${links
+            .map(
+              ([label, url]) =>
+                `<a class="text-link" href="${escapeHTML(url)}" target="_blank" rel="noopener">${escapeHTML(label)} ↗</a>`,
+            )
+            .join(" &nbsp;·&nbsp; ")}
         </p>
       </div>
-    ` : ""}
+    `
+        : ""
+    }
   `;
 
   document.querySelector("#projectDialog").showModal();
 }
 
 // Project filters
-projectFilters.addEventListener("click", event => {
+projectFilters.addEventListener("click", (event) => {
   const button = event.target.closest("[data-category]");
   if (!button) return;
 
@@ -279,12 +406,12 @@ projectsSearch.addEventListener("input", renderProjects);
 projectSort.addEventListener("change", renderProjects);
 
 // Project cards
-projectGrid.addEventListener("click", event => {
+projectGrid.addEventListener("click", (event) => {
   const card = event.target.closest("[data-project]");
   if (card) openProject(card.dataset.project);
 });
 
-projectGrid.addEventListener("keydown", event => {
+projectGrid.addEventListener("keydown", (event) => {
   if (
     (event.key === "Enter" || event.key === " ") &&
     event.target.matches("[data-project]")
@@ -299,7 +426,7 @@ document.querySelector("#dialogClose").addEventListener("click", () => {
   document.querySelector("#projectDialog").close();
 });
 
-document.querySelector("#projectDialog").addEventListener("click", event => {
+document.querySelector("#projectDialog").addEventListener("click", (event) => {
   if (event.target === event.currentTarget) {
     event.currentTarget.close();
   }
@@ -307,19 +434,24 @@ document.querySelector("#projectDialog").addEventListener("click", event => {
 
 // Skills
 function renderSkills(query = "") {
-  const filtered = skills.filter(skill =>
+  const filtered = skills.filter((skill) =>
     `${skill.group} ${skill.name} ${skill.meta}`
       .toLowerCase()
-      .includes(query.toLowerCase())
+      .includes(query.toLowerCase()),
   );
 
-  const groups = [...new Set(filtered.map(skill => skill.group))];
+  const groups = [...new Set(filtered.map((skill) => skill.group))];
 
   document.querySelector("#skillsGrid").innerHTML = filtered.length
-    ? groups.map(group => `
+    ? groups
+        .map(
+          (group) => `
         <h3 class="skill-group">${escapeHTML(group)}</h3>
 
-        ${filtered.filter(skill => skill.group === group).map(skill => `
+        ${filtered
+          .filter((skill) => skill.group === group)
+          .map(
+            (skill) => `
           <article class="skill-card">
             <span class="skill-symbol">${escapeHTML(skill.symbol)}</span>
             <div>
@@ -327,63 +459,80 @@ function renderSkills(query = "") {
               <div class="skill-meta">${escapeHTML(skill.meta)}</div>
             </div>
           </article>
-        `).join("")}
-      `).join("")
+        `,
+          )
+          .join("")}
+      `,
+        )
+        .join("")
     : `<div class="empty-state">No matching technologies.</div>`;
 }
 
-document.querySelector("#skillsSearch").addEventListener("input", event => {
+document.querySelector("#skillsSearch").addEventListener("input", (event) => {
   renderSkills(event.target.value);
 });
 
 // Credentials
-document.querySelector("#credentialsGrid").innerHTML = credentials.map(item => `
+document.querySelector("#credentialsGrid").innerHTML = credentials
+  .map(
+    (item) => `
   <article class="credential-card">
     <span class="credential-type">${escapeHTML(item.type)}</span>
     <h3 class="credential-title">${escapeHTML(item.title)}</h3>
     <p class="credential-date">${escapeHTML(item.date)}</p>
   </article>
-`).join("");
+`,
+  )
+  .join("");
 
 // Blog articles
-document.querySelector("#blogGrid").innerHTML = articles.map(article => `
+document.querySelector("#blogGrid").innerHTML = articles
+  .map(
+    (article) => `
   <article class="journal-card">
     <span class="journal-type">${escapeHTML(article.type)} · ${escapeHTML(article.date)}</span>
     <h3>${escapeHTML(article.title)}</h3>
     <p>${escapeHTML(article.description)}</p>
     <a href="${escapeHTML(article.url)}">READ ARTICLE ↗</a>
   </article>
-`).join("");
+`,
+  )
+  .join("");
 
 // Instagram posts
-document.querySelector("#instagramGrid").innerHTML = instagramPosts.map(post => `
+document.querySelector("#instagramGrid").innerHTML = instagramPosts
+  .map(
+    (post) => `
   <article class="instagram-card">
     <span>${escapeHTML(post.label)}</span>
     <strong>${escapeHTML(post.title)}</strong>
     <a href="${escapeHTML(post.url)}" target="_blank" rel="noopener">VIEW POST ↗</a>
   </article>
-`).join("");
+`,
+  )
+  .join("");
 
-document.querySelector("#instagramProfile").href = "https://www.instagram.com/";
+document.querySelector("#instagramProfile").href =
+  "https://www.instagram.com/cr3o.engineering/";
 
-// Contact form
-document.querySelector("#contactForm").addEventListener("submit", event => {
+
+document.querySelector("#contactForm").addEventListener("submit", (event) => {
   event.preventDefault();
 
   const form = event.currentTarget;
   const data = new FormData(form);
 
-  const recipient = "YOUR_EMAIL@example.com";
+  const recipient = "joshuauzokwe12@gmail.com";
 
   const subject = encodeURIComponent(
-    `${data.get("reason")} — Portfolio contact`
+    `${data.get("reason")} — Portfolio contact`,
   );
 
   const body = encodeURIComponent(
     `Name: ${data.get("firstName")} ${data.get("lastName")}\n` +
-    `Email: ${data.get("email")}\n` +
-    `Reason: ${data.get("reason")}\n\n` +
-    `${data.get("message")}`
+      `Email: ${data.get("email")}\n` +
+      `Reason: ${data.get("reason")}\n\n` +
+      `${data.get("message")}`,
   );
 
   if (recipient === "YOUR_EMAIL@example.com") {
@@ -392,8 +541,7 @@ document.querySelector("#contactForm").addEventListener("submit", event => {
     return;
   }
 
-  window.location.href =
-    `mailto:${recipient}?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
   document.querySelector("#formStatus").textContent =
     "Your email app should open with the message prepared.";
@@ -408,7 +556,7 @@ menuToggle.addEventListener("click", () => {
   menuToggle.setAttribute("aria-expanded", String(open));
 });
 
-navLinks.querySelectorAll("a").forEach(link => {
+navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
     menuToggle.setAttribute("aria-expanded", "false");
