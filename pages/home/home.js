@@ -152,11 +152,11 @@ const skills = [
 const credentials = [
   {
     type: "Coursework",
-    title: "Python For Data Science & Machine Learning",
+    title: "M.I.T - Python For Data Science & Machine Learning",
     date: "Grade: PASS",
   },
   {
-    type: "Coursework",
+    type: "Coursework", 
     title:
       "Rowan ENT 06110: Interdisciplinary Perspectives on Entrepreneurship",
     date: "Grade: PASS",
